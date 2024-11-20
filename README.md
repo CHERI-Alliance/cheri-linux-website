@@ -1,7 +1,7 @@
 # CHERI Linux Website
 
 ![The CHERI Linux logo showing a Linux Tux penguin logo with the CHERI Alliance association logo on its chest
-and the words CHERI Linux to the left of it](/images/CHERI_Linux_Tux.svg)
+and the words CHERI Linux to the left of it](/themes/hugo-whisper-theme/static/images/CHERI_Linux_Tux.svg)
 
 This repository contains the static website for [cheri-linux.org](https://cheri-linux.org)
 
