@@ -7,7 +7,7 @@ weight: 1
 ## CHERI Linux
 
 A cross-architecture project to secure Linux with 
-[Capability Enhanced RISC Instructions (CHERI)](https://cheri-alliance.org/discover-cheri/).
+[Capability Hardware Enhanced RISC Instructions (CHERI)](https://cheri-alliance.org/discover-cheri/).
 
 CHERI is used to secure the Linux kernel and user-space utilities, libraries and applications with strong, deterministic memory safety.
 
