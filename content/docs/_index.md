@@ -4,7 +4,7 @@ date: 2024-11-20T19:49:20+10:00
 weight: 1
 ---
 
-## CHERI Linux
+## Porting Linux to CHERI
 
 A cross-architecture project to secure Linux with 
 [Capability Hardware Enhanced RISC Instructions (CHERI)](https://cheri-alliance.org/discover-cheri/).
