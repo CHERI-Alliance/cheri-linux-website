@@ -1,6 +1,6 @@
 baseURL = "/"
 languageCode = "en-gb"
-title = "CHERI Linux"
+title = "Porting Linux to CHERI"
 themesDir = "themes"
 theme = "whisper-2023-11-26"
 
@@ -31,7 +31,7 @@ summaryLength = 30
   google_analytics_id=""
   homepage_button_link = 'docs'
   homepage_button_text = 'Read The Docs'
-  homepage_intro = 'Linux enhanced with CHERI security.'
+  homepage_intro = 'Enhancing Linux with CHERI security.'
   homepage_image = 'images/cheri_tux.svg'
 
   ## You can enable to add anchor links to header elements
@@ -39,11 +39,11 @@ summaryLength = 30
 
   [params.homepage_meta_tags]
     meta_description = "Linux enhanced with Capability Hardware Enhanced RISC Instructions (CHERI) security."
-    meta_og_title = "CHERI Linux"
+    meta_og_title = "Porting Linux to CHERI"
     meta_og_type = "website"
     meta_og_url = ""
     meta_og_image = ""
-    meta_og_description = "Linux enhanced with Capability Hardware Enhanced RISC Instructions (CHERI) security."
+    meta_og_description = "Enhancing Linux with Capability Hardware Enhanced RISC Instructions (CHERI) security."
     meta_twitter_card = "summary"
     meta_twitter_site = ""
     meta_twitter_creator = ""

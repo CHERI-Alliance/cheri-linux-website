@@ -1,4 +1,4 @@
-# CHERI Linux Website
+# Website for CHERI Alliance collaboration around Linux
 
 This repository contains the static website for [cheri-linux.org](https://cheri-linux.org)
 
