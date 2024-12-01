@@ -1,5 +1,7 @@
 {{ define "title" }}{{ .Site.Title }}{{ end}}
-{{ define "header_css" }}{{ end }}
+{{ define "header_css" }}
+<link rel="stylesheet" href="css/bootstrap-icons.min.css">
+{{ end }}
 {{ define "body_classes" }}page-home{{ end }}
 {{ define "header_classes" }}{{ end }}
 
@@ -17,7 +19,7 @@
 
 {{ define "main" }}
 <div class="strip">
-  <div class="container pt-4 pb-16">
+  <div class="container pt-4 pb-4">
     <div class="row">
       <div class="col-12">
         <h1 class="title">{{ .Title | default .Site.Title }}</h1>
@@ -28,9 +30,111 @@
           <p>{{ .Site.Params.homepage_intro }}</p>
           {{ end }}
         </div>
-        <a class="button button-primary mb-2" href="{{ .Site.Params.homepage_button_link | relURL }}">
-          {{ .Site.Params.homepage_button_text }}
-        </a>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-9">
+        <img src="images/cheri-desktop.png" class="shadow w-100 mb-3" alt="Desktop environment running on Morello">
+      </div>
+      <div class="col-lg-3 text-muted text-start">
+        <div class="row">
+          <div class="col d-sm-none d-lg-block">
+            <div class="row">
+              <div class="col">
+                <hr class="mt-0">
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-12">
+            <div class="row">
+              <div class="col text-center">
+                <a href="https://cheri-cpu.slack.com/messages/cheri-linux"
+                  class="button button-primary w-100 mb-2">Talk to Us on Slack</a>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col text-center">
+                <a href="https://cheri-alliance.org/discover-cheri/" class="button button-primary w-100 mb-2">Learn About CHERI</a>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col text-center">
+                <a href="https://github.com/orgs/CHERI-Alliance/repositories" class="button button-primary w-100 mb-2">Code Repositories</a>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col text-center">
+                <a href="https://linux.morello-project.org/"
+                  class="button button-primary w-100 mb-2">Get Started on Morello</a>
+              </div>
+            </div>
+          <div class="col d-sm-none d-lg-block">
+            <div class="row">
+              <div class="col">
+                <hr class="mt-0">
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="strip bg-light">
+  <div class="container pt-4 pb-4">
+    <h1>Accelerating Adoption</h1>
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="container py-2 text-start">
+          Extensive research and development activity has gone into porting a version of FreeBSD, called <a href="https://www.cheribsd.org/">CheriBSD</a>, to use CHERI's features, and in particular explore and evaluate the sizeable design space of potential CHERI integrations with a general-purpose, MMU-based operating system. This work has been highly successful, with memory-safe ports of the FreeBSD kernel and userlevel, and over 10,000 open source packages using a CHERI-adapted LLVM toolchain. With a clear set of abstractions defined, and existing prototypes evaluated at scale, efforts to port Linux will be substantially less work.
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="container py-2 text-start">
+
+Our strategy is to maximize portability of CHERI protection, language integration, and APIs across architectures (e.g., Arm’s Morello, CHERI-RISC-V), toolchain (e.g., LLVM, GCC), and operating systems (e.g., FreeBSD, Linux). This minimizes developer burden in adapting application-level code, ensures that lessons learned in any of these can be broadly benefited from in all, and helps reinforce the message to upstream communities that CHERI protection is a well defined, portable, and consistently implemented model, and sufficiently mature to adopt.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="strip">
+  <div class="container pt-4">
+    <h1>Features</h1>
+    <div class="row lead">
+      <div class="col-lg-4">
+        <div class="container py-2">
+          <div class="card-icon">
+            <img src="images/bootstrap-icons/shield-lock.svg" />
+          </div>
+        </div>
+        <div class="container py-2">
+          Spatial and temporal memory safety for userspace and spatial memory safety for the kernel
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="container py-2">
+          <div class="card-icon">
+            <img src="images/bootstrap-icons/bug.svg" />
+          </div>
+        </div>
+        <div class="container py-2">
+          Userspace and kernel debugger support for memory-safe and memory-unsafe code
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="container py-2">
+          <div class="card-icon">
+            <img src="images/bootstrap-icons/cpu.svg" />
+          </div>
+        </div>
+        <div class="container py-2">
+          Runs on Morello boards, Morello FVP, QEMU and FPGA
+        </div>
       </div>
     </div>
   </div>
@@ -49,6 +153,7 @@
   </div>
 </div>
 {{ end }}
+
 
 {{ end }}
 
