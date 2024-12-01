@@ -1,7 +1,6 @@
 ---
-title: 'Porting Linux to CHERI'
-date: 2024-11-20T19:49:20+10:00
+title: 'Securing Linux® with CHERI'
+date: 2024-11-30T16:27:15-05:00
 ---
 
-A cross-architecture project to secure Linux with\
-[Capability Hardware Enhanced RISC Instructions (CHERI)](https://cheri-alliance.org/discover-cheri/).
+CHERI is a hardware approach to memory safety that improves system security at runtime by extending established ISAs, such as ARM, RISC-V, and x86, with new architectural features. This cross-architecture project adapts the Linux Kernel and userspace software to benefit from CHERI's memory protection and software compartmentalization features.
