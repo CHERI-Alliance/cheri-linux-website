@@ -24,18 +24,16 @@
       <div class="col-12">
         <h1 class="title">{{ .Title | default .Site.Title }}</h1>
         <div class="content">
-          {{ if .Content }}
           {{ .Content }}
-          {{ else }}
-          <p>{{ .Site.Params.homepage_intro }}</p>
-          {{ end }}
         </div>
       </div>
     </div>
 
     <div class="row">
       <div class="col-lg-9">
-        <img src="images/cheri-desktop.png" class="shadow w-100 mb-3" alt="Desktop environment running on Morello">
+        {{ with .Site.Data.homepage.banner }}
+        <img src="{{ .image | relURL }}" class="shadow w-100 mb-3" alt="{{ .alt }}">
+        {{ end }}
       </div>
       <div class="col-lg-3 text-muted text-start">
         <div class="row">
@@ -47,28 +45,13 @@
             </div>
           </div>
           <div class="col-sm-6 col-lg-12">
+            {{ range .Site.Data.homepage.buttons }}
             <div class="row">
               <div class="col text-center">
-                <a href="https://cheri-cpu.slack.com/messages/cheri-linux"
-                  class="button button-primary w-100 mb-2">Talk to Us on Slack</a>
+                <a href="{{ .link }}" class="button button-primary w-100 mb-2">{{ .text }}</a>
               </div>
             </div>
-            <div class="row">
-              <div class="col text-center">
-                <a href="https://cheri-alliance.org/discover-cheri/" class="button button-primary w-100 mb-2">Learn About CHERI</a>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col text-center">
-                <a href="https://github.com/orgs/CHERI-Alliance/repositories" class="button button-primary w-100 mb-2">Code Repositories</a>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col text-center">
-                <a href="https://linux.morello-project.org/"
-                  class="button button-primary w-100 mb-2">Get Started on Morello</a>
-              </div>
-            </div>
+            {{end}}
           <div class="col d-sm-none d-lg-block">
             <div class="row">
               <div class="col">
@@ -83,70 +66,52 @@
   </div>
 </div>
 
+{{ with .Site.Data.homepage.adoption }}
 <div class="strip bg-light">
   <div class="container pt-4 pb-4">
-    <h1>Accelerating Adoption</h1>
+    <h1>{{ .title }}</h1>
     <div class="row">
+      {{ range .cards }}
       <div class="col-lg-6">
         <div class="container py-2 text-start">
-          Extensive research and development activity has gone into porting a version of FreeBSD, called <a href="https://www.cheribsd.org/">CheriBSD</a>, to use CHERI's features, and in particular explore and evaluate the sizeable design space of potential CHERI integrations with a general-purpose, MMU-based operating system. This work has been highly successful, with memory-safe ports of the FreeBSD kernel and userlevel, and over 10,000 open source packages using a CHERI-adapted LLVM toolchain. With a clear set of abstractions defined, and existing prototypes evaluated at scale, efforts to port Linux will be substantially less work.
+          {{ .text | safeHTML }}
         </div>
       </div>
-      <div class="col-lg-6">
-        <div class="container py-2 text-start">
-
-Our strategy is to maximize portability of CHERI protection, language integration, and APIs across architectures (e.g., Arm’s Morello, CHERI-RISC-V), toolchain (e.g., LLVM, GCC), and operating systems (e.g., FreeBSD, Linux). This minimizes developer burden in adapting application-level code, ensures that lessons learned in any of these can be broadly benefited from in all, and helps reinforce the message to upstream communities that CHERI protection is a well defined, portable, and consistently implemented model, and sufficiently mature to adopt.
-        </div>
-      </div>
+      {{ end }}
     </div>
   </div>
 </div>
+{{ end }}
 
+{{ with .Site.Data.homepage.features }}
 <div class="strip">
-  <div class="container pt-4">
-    <h1>Features</h1>
+  <div class="container pt-4 pb-4">
+    <h1>{{ .title }}</h1>
     <div class="row lead">
+      {{ range .cards }}
       <div class="col-lg-4">
         <div class="container py-2">
           <div class="card-icon">
-            <img src="images/bootstrap-icons/shield-lock.svg" />
+            <img src="{{ .icon | relURL }}">
           </div>
         </div>
         <div class="container py-2">
-          Spatial and temporal memory safety for userspace and spatial memory safety for the kernel
+          {{ .text | safeHTML }}
         </div>
       </div>
-      <div class="col-lg-4">
-        <div class="container py-2">
-          <div class="card-icon">
-            <img src="images/bootstrap-icons/bug.svg" />
-          </div>
-        </div>
-        <div class="container py-2">
-          Userspace and kernel debugger support for memory-safe and memory-unsafe code
-        </div>
-      </div>
-      <div class="col-lg-4">
-        <div class="container py-2">
-          <div class="card-icon">
-            <img src="images/bootstrap-icons/cpu.svg" />
-          </div>
-        </div>
-        <div class="container py-2">
-          Runs on Morello boards, Morello FVP, QEMU and FPGA
-        </div>
-      </div>
+      {{ end }}
     </div>
   </div>
 </div>
+{{ end }}
 
-{{ if .Site.Params.homepage_image }}
+{{ with .Site.Data.homepage.mascot }}
 <div class="strip">
   <div class="container pt-4 pb-4">
     <div class="row justify-content-right">
       <div class="col-12">
         <div class="penguin">
-          <img src="{{ .Site.Params.homepage_image | relURL}}" />
+          <img src="{{ .image | relURL }}" alt="{{ .alt }}">
         </div>
       </div>
     </div>
