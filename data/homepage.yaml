@@ -1,0 +1,38 @@
+# Banner image for the home page
+banner:
+  image: images/cheri-desktop.png
+  alt: Desktop environment running on Morello
+
+# Buttons for the home page
+buttons:
+  - text: Talk to Us on Slack
+    link: https://cheri-cpu.slack.com/messages/cheri-linux
+  - text: Learn About CHERI
+    link: https://cheri-alliance.org/discover-cheri/
+  - text: Code Repositories
+    link: https://github.com/orgs/CHERI-Alliance/repositories
+  - text: Get Started on Morello
+    link: https://linux.morello-project.org/
+
+# Adoption section for the home page
+adoption:
+  title: Accelerating Adoption
+  cards:
+    - text: Extensive research and development activity has gone into porting a version of FreeBSD, called <a href="https://www.cheribsd.org/">CheriBSD</a>, to use CHERI's features, and in particular explore and evaluate the sizeable design space of potential CHERI integrations with a general-purpose, MMU-based operating system. This work has been highly successful, with memory-safe ports of the FreeBSD kernel and userlevel, and over 10,000 open source packages using a CHERI-adapted LLVM toolchain. With a clear set of abstractions defined, and existing prototypes evaluated at scale, efforts to port Linux will be substantially less work.
+    - text: Our strategy is to maximize portability of CHERI protection, language integration, and APIs across architectures (e.g., Arm’s Morello, CHERI-RISC-V), toolchain (e.g., LLVM, GCC), and operating systems (e.g., FreeBSD, Linux). This minimizes developer burden in adapting application-level code, ensures that lessons learned in any of these can be broadly benefited from in all, and helps reinforce the message to upstream communities that CHERI protection is a well defined, portable, and consistently implemented model, and sufficiently mature to adopt.
+
+# Features section for the home page
+features:
+  title: Features
+  cards:
+    - icon: images/bootstrap-icons/shield-lock.svg
+      text: "Spatial and temporal memory safety for userspace and spatial memory safety for the kernel"
+    - icon: images/bootstrap-icons/bug.svg
+      text: "Userspace and kernel debugger support for memory-safe and memory-unsafe code"
+    - icon: images/bootstrap-icons/cpu.svg
+      text: "Runs on Morello boards, Morello FVP, QEMU and FPGA"
+
+# Mascot image for the home page
+mascot:
+  image: images/cheri_tux.svg
+  alt: Tux the Penguin
