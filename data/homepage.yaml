@@ -28,7 +28,7 @@ features:
     - icon: images/bootstrap-icons/shield-lock.svg
       text: "Spatial memory safety for userspace and the Kernel"
     - icon: images/bootstrap-icons/bug.svg
-      text: "Userspace and kernel debugger support for memory-safe and memory-unsafe code"
+      text: "Userspace and Kernel debugger support for memory-safe and memory-unsafe code"
     - icon: images/bootstrap-icons/cpu.svg
       text: "Runs on Morello boards, Morello FVP, QEMU, and RISC-V FPGA platforms"
 
