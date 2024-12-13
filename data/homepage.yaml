@@ -1,12 +1,14 @@
 # Banner image for the home page
 banner:
-  image: images/cheri-desktop.png
+  image: images/cheri-board-overlay.png
   alt: Desktop environment running on Morello
 
 # Buttons for the home page
 buttons:
   - text: Talk to Us on Slack
     link: https://cheri-cpu.slack.com/messages/cheri-linux
+  - text: Join the Mailing List
+    link: https://lists.cheri-alliance.org/mailman3/postorius/lists/linux-kernel.cheri-alliance.org/
   - text: Learn About CHERI
     link: https://cheri-alliance.org/discover-cheri/
   - text: Code Repositories
