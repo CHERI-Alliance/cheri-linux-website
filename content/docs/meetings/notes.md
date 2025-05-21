@@ -1,4 +1,4 @@
-# CHERI Linux Strategy Meeting Notes
+# Linux Strategy Meeting Notes
 
 ### 21 May 2025
 
@@ -14,7 +14,7 @@
 
 ### 7 May 2025
 
-* Christian presented a deep dive on the Codasip Linux Kernel work.
+* Christian presented a deep dive on the [Codasip Linux Kernel work](deepdive/2025-05-07_Christian_Ehrhardt_CHERI_Linux_Kernel_work.pdf).
 
 ### 23 Apr 2025
 
@@ -24,7 +24,7 @@
 
 ### 9 Apr 2025
 
-* Carl presented Linux status update talk on [Porting Linux to CHERI](https://cheri-alliance.org/wp-content/uploads/2025/04/3.3-Carl-Shaw-Porting-Linux-to-CHERI.pdf) (repeat from [CHERI Blossoms](https://cheri-alliance.org/events/cheri-blossoms-conference-apr-2025/) conference).
+* Carl presented Linux status update talk on [Porting Linux to CHERI](deepdive/2025-04-09_Carl_Shaw_Porting_Linux_to_CHERI.pdf) (repeat from [CHERI Blossoms](https://cheri-alliance.org/events/cheri-blossoms-conference-apr-2025/) conference).
 
 ### 26 Mar 2025
 
@@ -85,7 +85,7 @@
 
 ### 18 Dec 2024
 
-* Vincenzo and Kevin gave a deep dive presentation on Morello Linux, the choices they made, what they accomplished, lessons learned, and thoughts on future development for Linux on CHERI.
+* Vincenzo and Kevin gave deep dive presentations on the [Morello Linux project](deepdive/2024-12-18_Vincenzo_Frascino_Morello_Technical_Intro.pdf), and the [Morello Linux Kernel](deepdive/2024-12-18_Kevin_Brodsky_Morello_Linux_kernel_overview.pdf) – the choices they made, what they accomplished, lessons learned, and thoughts on future development for Linux on CHERI.
 
 ### 4 Dec 2024
 
