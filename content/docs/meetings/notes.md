@@ -1,11 +1,20 @@
 # Linux Strategy Meeting Notes
 
+### 4 Jun 2025
+
+* These [meeting notes](https://github.com/CHERI-Alliance/cheri-linux-website/blob/main/content/docs/meetings/notes.md) and [slides from the deep dive sessions](https://github.com/CHERI-Alliance/cheri-linux-website/tree/main/content/docs/meetings/deepdive) are published in the git repo for the CHERI Linux website.
+* We have a collaborative space on the [CHERI Alliance NextCloud](https://nextcloud.cheri-alliance.org/) to post recordings of the deep dive sessions. It would require you to set up an account to access, does that work for everyone?
+* The [mailing list](https://lists.cheri-alliance.org/mailman3/postorius/lists/linux-kernel.cheri-alliance.org/) has archiving now, so it’s worth posting meeting reminders.
+* Status updates:
+  * Codasip is getting the SPEC CPU benchmarks running on their cores. Currently have Embench. Have been using them to fix compiler issues.
+* Reminder of the upcoming July 4th holiday, if we do a deep dive on the July 2nd call, make sure to record it.
+
 ### 21 May 2025
 
 * Q: Is there at 6.14 branch of the Codasip Linux Kernel? A: Still cleaning up the 6.10 branch first, then will do the update to 6.14.  
 * CHERI C Examples repository: [https://github.com/CTSRD-CHERI/cheri-c-examples](https://github.com/CTSRD-CHERI/cheri-c-examples) with discussion in the [\#cheri-c-examples](https://cheri-cpu.slack.com/archives/C08NKQB7D4K) channel in the public CHERI-CPU Slack.  
 * Q: How to publish updates to the website? A: Commit the update, and Carl will launch the changes (not handed over to CHERI Alliance sysadmin yet).  
-* Future topics: temporal safety on RISC-V CheriBSD ports (Alfredo, end of June or early July), MIT Lincoln Lab (Derrick, 2+ months), Yocto (Codasip after released, see if Good Penguin will do a deep dive on theirs), bpf, aio (Christian Ehrhardt), graphics, ioctl, compat, testing, ltp, plan to increase coverage, principles, performance improvements (benchmarking/optimization).  
+* Future topics: temporal safety on RISC-V CheriBSD ports (Alfredo, end of June or early July), MIT Lincoln Lab work on Linux compartmentalization (Derrick, 2+ months), Yocto (Codasip after released, see if Good Penguin will do a deep dive on theirs), bpf, aio (Christian Ehrhardt), graphics, ioctl, compat, testing, ltp, plan to increase coverage, principles, performance improvements (benchmarking/optimization).
 * Ongoing action items:  
   * Release CHERI Linux strategy doc  
   * Publish collaboration guidelines on website  
@@ -69,6 +78,7 @@
 
 ### 29 Jan 2025
 
+* Alfredo presented a deep dive on [CheriBSD and lessons learned for porting an OS kernel to CHERI](deepdive/2025-01-29_Alfredo_Mazzinghi_CheriBSD_kernel_and_OS_design_considerations.pdf).
 * Codasip has a binary userspace image they can release.  
 * Yocto build system still coming.  
 * Codasip is working on aligning with the latest RISC-V profiles.  
@@ -77,6 +87,7 @@
 
 ### 15 Jan 2025
 
+* Alfredo presented a deep dive on [CHERI QEMU development](https://github.com/qwattash/cheri-notes/blob/master/qemu-intro.md).
 * Yocto build system is coming.  
 * Have some Codasip boards to try out the new Linux branch. Should be able to give a bitstream for Codasip boards next week.  
 * Have run benchmarks, but limited by lacking things like strcopy/memcopy.  
