@@ -1,20 +1,36 @@
 # Linux Strategy Meeting Notes
 
+### 2 Jul 2025
+
+* Edward successfully combined hybrid aarch64 Codasip kernel and mostly stock Debian userspace compiled with stock Morello SDK. Can also run purecap binaries. Some discussion of future work:  
+  * Edward will work on purecap kernel for aarch64.  
+  * Need to understand where we are, and decide what we want to do with userspace.  
+  * Upstream Debian depends on Python and Perl, which are ported for CheriBSD and Morello, but not yet CHERI RISC-V. You can’t compile glibc with LLVM (though, there is some existing work to compile Debian entirely with LLVM and their libc). ARM will not build a purecap kernel from either Morello or Codasip sources.  
+  * First, aim to make the Codasip kernel as compatible as possible with Morello.  
+  * Gchips has just updated Morello LLVM to converge with the Cambridge/SRI research version of LLVM.
+
+### 18 Jun 2025
+
+* Roadmap doc to be published, waiting on attribution  
+* Edward is reviewing Codasip changes on CHERI Linux. Will have results to share in a few weeks.  
+* NSA replicated the Nginx experiments on Morello Linux.
+
 ### 4 Jun 2025
 
-* These [meeting notes](https://github.com/CHERI-Alliance/cheri-linux-website/blob/main/content/docs/meetings/notes.md) and [slides from the deep dive sessions](https://github.com/CHERI-Alliance/cheri-linux-website/tree/main/content/docs/meetings/deepdive) are published in the git repo for the CHERI Linux website.
-* We have a collaborative space on the [CHERI Alliance NextCloud](https://nextcloud.cheri-alliance.org/) to post recordings of the deep dive sessions. It would require you to set up an account to access, does that work for everyone?
-* The [mailing list](https://lists.cheri-alliance.org/mailman3/postorius/lists/linux-kernel.cheri-alliance.org/) has archiving now, so it’s worth posting meeting reminders.
-* Status updates:
-  * Codasip is getting the SPEC CPU benchmarks running on their cores. Currently have Embench. Have been using them to fix compiler issues.
+* These [meeting notes](https://github.com/CHERI-Alliance/cheri-linux-website/blob/main/content/docs/meetings/notes.md) and [slides from the deep dive sessions](https://github.com/CHERI-Alliance/cheri-linux-website/tree/main/content/docs/meetings/deepdive) are published in the git repo for the CHERI Linux website.  
+* We have a collaborative space on the [CHERI Alliance NextCloud](https://nextcloud.cheri-alliance.org/) to post recordings of the deep dive sessions. It would require you to set up an account to access, does that work for everyone?  
+* The [mailing list](https://lists.cheri-alliance.org/mailman3/postorius/lists/linux-kernel.cheri-alliance.org/) has archiving now, so it’s worth posting meeting reminders.  
+* Status updates:  
+  * Codasip is getting the SPEC CPU benchmarks running on their cores. Currently have Embench. Have been using them to fix compiler issues.  
 * Reminder of the upcoming July 4th holiday, if we do a deep dive on the July 2nd call, make sure to record it.
 
 ### 21 May 2025
 
 * Q: Is there at 6.14 branch of the Codasip Linux Kernel? A: Still cleaning up the 6.10 branch first, then will do the update to 6.14.  
 * CHERI C Examples repository: [https://github.com/CTSRD-CHERI/cheri-c-examples](https://github.com/CTSRD-CHERI/cheri-c-examples) with discussion in the [\#cheri-c-examples](https://cheri-cpu.slack.com/archives/C08NKQB7D4K) channel in the public CHERI-CPU Slack.  
+  * Carl pointed out another example repo: [https://github.com/capablevms/cheri-examples](https://github.com/capablevms/cheri-examples)  
 * Q: How to publish updates to the website? A: Commit the update, and Carl will launch the changes (not handed over to CHERI Alliance sysadmin yet).  
-* Future topics: temporal safety on RISC-V CheriBSD ports (Alfredo, end of June or early July), MIT Lincoln Lab work on Linux compartmentalization (Derrick, 2+ months), Yocto (Codasip after released, see if Good Penguin will do a deep dive on theirs), bpf, aio (Christian Ehrhardt), graphics, ioctl, compat, testing, ltp, plan to increase coverage, principles, performance improvements (benchmarking/optimization).
+* Future topics: temporal safety on RISC-V CheriBSD ports (Alfredo, end of June or early July), MIT Lincoln Lab work on Linux compartmentalization (Derrick, 2+ months), Yocto (Codasip after released, see if Good Penguin will do a deep dive on theirs), bpf, aio (Christian Ehrhardt), graphics, ioctl, compat, testing, ltp, plan to increase coverage, principles, performance improvements (benchmarking/optimization).  
 * Ongoing action items:  
   * Release CHERI Linux strategy doc  
   * Publish collaboration guidelines on website  
@@ -46,22 +62,25 @@
   * Server stack (nginx, haven't done mysql)  
   * Most of the gaps are currently in the Linux kernel, the low level bits that enable memory safety and temporal safety  
   * Would be good to try out the things that are already ported to FreeBSD on Linux, including private patches that can't be upstreamed.  
-* Move toward a KDE demo, a complete development stack that people can target. That's what people experimenting with CHERIbsd frequently asked "when can we get a real idea". A list of targets in cheribuild, but cross-compiling kde will likely be faster than native compiling in a VM. KDE cross-compile targets exist, but haven't been tested in a while. But, at least the cross-compile infrastructure is there.  
+* Move toward a KDE demo, a complete development stack that people can target. That's what people experimenting with CheriBSD frequently asked "when can we get a real idea". A list of targets in cheribuild, but cross-compiling kde will likely be faster than native compiling in a VM. KDE cross-compile targets exist, but haven't been tested in a while. But, at least the cross-compile infrastructure is there.  
 * QEMU userlevel support for CHERI.  
 * Can debian image building do cross-compile using QEMU?  
 * What are the interventions we can make as early as possible, to enable others to do work?  
 * Codasip in 18 months may have chips, but in order, single pipeline, etc.  
 * Draw out a roadmap for CHERI Linux as a distro.  
-* Release the CHERI Linux Roadmap. Either a wiki or mdbook. Check with cheri alliance for a repo. Get permission from existing contributors.
+* Release the CHERI Linux Roadmap. Either a wiki or mdbook. Check with CHERI Alliance for a repo. Get permission from existing contributors.
 
-### 12 Mar 2025  
+### 12 Mar 2025
+
+* General discussion, status updates, and planning future deep dive topics.
+
 ### 26 Feb 2025
 
 * Historically CTSRD QEMU, and CheriBSD, have been making merge commits when they update to a new upstream version. Here's the work in progress update merge for QEMU 6.2: [https://github.com/CTSRD-CHERI/qemu/pull/264](https://github.com/CTSRD-CHERI/qemu/pull/264)  
   * Pros: This preserves the upstream history and the CHERI development history without rebasing (so the SHAs are all the same, and you avoid all the problems of multiple collaborators working on a mainline that's constantly rebased).  
   * Cons: The merge commit approach works best when you're updating regularly from upstream, otherwise you can end up with a large and complex merge commit.  
 * Morello was rebasing all their patches on each new upstream version, but was only updating every third release of the upstream Linux Kernel.  
-* Codasip also rebased all the Morello patches on   
+* Codasip also rebased all the Morello patches on Linux Kernel 6.10.  
 * Generally agreed on one of two paths:  
   * Option A: Start with clean Linux kernel v6.10 with full history, apply Morello patches on top, and then a cleaned up set of Codasip patches on top of that  
   * Option B: Start with clean Linux kernel v6.14 with full history, apply Morello patches on top, and then a cleaned up set of Codasip patches on top of that  
@@ -69,7 +88,7 @@
 * Compat accelerated development, because you can run entire existing applications, and also check that you didn't break anything.)  
 * Morello merged 5 patches to support netfilter on hybrid kernel (fixes problem when kernel and userspace pointers aren't the same size)  
 * Carl will make Allison an admin on the CHERI Alliance Linux Kernel mailing list.  
-* Ongoing work on the CHERI C/C++ Programming Guide: https://github.com/CTSRD-CHERI/cheri-c-programming  
+* Ongoing work on the [CHERI C/C++ Programming Guide](https://github.com/CTSRD-CHERI/cheri-c-programming)  
 * Future topics: yocto, bpf, aio (Christian Ehrhardt), graphics, ioctl, compat, testing, ltp, plan to increase coverage
 
 ### 12 Feb 2025
@@ -97,6 +116,7 @@
 ### 18 Dec 2024
 
 * Vincenzo and Kevin gave deep dive presentations on the [Morello Linux project](deepdive/2024-12-18_Vincenzo_Frascino_Morello_Technical_Intro.pdf), and the [Morello Linux Kernel](deepdive/2024-12-18_Kevin_Brodsky_Morello_Linux_kernel_overview.pdf) – the choices they made, what they accomplished, lessons learned, and thoughts on future development for Linux on CHERI.
+* Alfredo presented a deep dive on [CheriBSD development](https://github.com/qwattash/cheri-notes/blob/master/cheribsd-intro.md).
 
 ### 4 Dec 2024
 
