@@ -1,5 +1,23 @@
 # Linux Strategy Meeting Notes
 
+### 13 Aug 2025
+
+* QEMU working group is working toward convergence, will add Codasip’s “prime” features on top after converging other variants.  
+* Christian is working on 6.16, nearly done but will probably be released in early September (August holidays).  
+* Alfredo presented a deep dive on his temporal safety work.
+
+### 30 Jul 2025
+
+* Codasip is preparing to release their Yocto configurations to build simple Linux images for CHERI RISC-V, together with an update to Linux Kernel to 6.16, and other projects including qemu, llvm, and gdb.  
+* Discussion of repository naming for a handful of ported projects that Codasip is releasing with their Yocto configurations, as well as convergence plans for the projects that have multiple ports.  
+* Derrick presented a deep dive on MIT Lincoln Lab’s work on Linux compartmentalization.
+
+### 16 Jul 2025
+
+* General discussion, status updates, and planning future deep dive topics.  
+* Preview of Alfredo’s work on temporal safety (will be a topic for a future deep dive).
+
+
 ### 2 Jul 2025
 
 * Edward successfully combined hybrid aarch64 Codasip kernel and mostly stock Debian userspace compiled with stock Morello SDK. Can also run purecap binaries. Some discussion of future work:  
