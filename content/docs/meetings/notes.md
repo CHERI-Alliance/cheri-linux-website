@@ -1,5 +1,113 @@
 # Linux Strategy Meeting Notes
 
+### 8 Apr 2026
+
+ * Updates and discussion
+
+### 25 Mar 2026
+
+ * Updates and discussion
+
+### 11 Mar 2026
+
+ * Updates and discussion
+
+### 25 Feb 2026
+
+ * Updates and discussion
+
+### 11 Feb 2026
+
+* The Capable Hub is looking into porting syzkaller. It's written in Go, but the runner doesn't need to be ported.
+* Yocto has been released. The [manifest repo](https://github.com/CHERI-Alliance/yocto-manifest) has instructions for building it. The [meta-cheri](https://github.com/CHERI-Alliance/meta-cheri) repo contains the versioned branches of the yocto layer.
+* Pawel will help with inplementing multi-lib in the yocto layer.
+* Planning to push out a new musl 1.2.5. Also looking at the latest, thinking about which one makes more sense.
+* Looking at pushing out a newer version of the compiler 19.1.7. Have started experimenting with LLVM 20
+
+### 28 Jan 2026
+
+* Yocto release will probably be next week. Update to scarthgap (upstream LTS), and Linux kernel 6.18.
+* Got CHERI Linux working on CVA6 CHERI (no networking yet, minimal drivers)
+
+### 14 Jan 2026
+
+* Capable Hub has joined CHERI Alliance, is now authorized to add their plugin to projects. Projects who want to use Capable Hub CI need to request from Marno and Capable Hub to enable a new repo for the plugin.
+* CA linux kernel is just running a compile test. Morello ported LTP, and Codasip updated it to a newer version. Codasip says they'll look into releasing that.
+* Capable Hub is working on porting Cyrus, FreeBSD's test suite.
+* Codasip expects to release their Yocto within a few days.
+* Hesham got CHERI Linux running on CVA6 with kernel and root filesystem. Slow to load kernel and filesystem from SD card on Genesys2 board.
+* Paul continuing to work on converting CheriBSD tests to general infrastructure. Cataloging the differences between Morello Linux and CheriBSD causing the failures.
+* Brooks is starting a working group for cross operating system working group in CHERI Alliance.
+
+### 3 Dec 2025
+
+* Introducing The Capable Hub
+* Discussion of CI needs:
+  - Want to be able to test CHERI version and non-CHERI version. Can just do that in docker images.
+  - Hosting for Docker images
+* Hesham has been experimenting with muslc and busybox, have been discussing on Slack. Has found bugs in muslc, qemu, llvm.
+* future topics: temporal safety, sub-object bounds
+
+### 19 Nov 2025
+
+* Codasip will push musl as-is, and then plan to release a cleaned-up branch later. Aiming to have everything out out by the end of the month.
+* Hesham has been trying to test everything from Codasip, they have released the kernel, busybox. Has been adding bits to cheribuild to test what Codasip release. Has gotten busybox to build, but not run (faulting). Codasip has released some custom scripts for building, but it builds without those custom scripts.
+* Hesham submitted a pull request to CHERI Alliance linux repo to fix build failures on Morello, which has been merged. Still exploring other build failures.
+* Codasip expect to have a QEMU update out soon. At LLVM 19.1.7 (the module loading they're working on requires at least LLVM 18).
+* Codasip is testing busybox and musl with dynamic linking.
+* Paul has been working on converting the test infrastructure for CheriBSD into a stand-alone test suite. Working on bounds-check tests, Cheri ABI tests, etc. A bit more than half of the tests are still on the to-do list. Will work on integrating the tests into the cheribuild system. The goal is to make these tests available to CHERI Linux, but also have an eye toward a POSIX-like standard across operating systems.
+
+### 5 Nov 2025
+
+* Codasip has released Linux Kernel 6.16. The linux-previous branch has the old contents.
+* musl should be out today
+* Yocto is still a sticking point, have to do a re-org to use external reps instead of internal repos.
+* Discussion of CI options:
+  - Using GitLab, doing regular builds, with offloading.
+  - Good Penguin uses AWS runners, but won't do this for the new program (kicks out runners, failures happen). Might have dedicated hardware for this in the future. Talk to Pawel Zalewski.
+  - Have set up Digital Catapult with physical hardware, and have it running in Cambridge data center.
+  - For Morello, we do have bhyve, so can run VMs for testing kernels
+
+### 22 Oct 2025
+
+* Hesham's update to cheribuild to build both Morello Linux and Codasip Linux has merged into main
+* Hesham plans to work on merging into a single Linux repo
+* Codasip plans to release the 6.16 Kernel in the next few days
+* The Roadmap doc is ready to go public, link it in from cheri-linux.org
+* Ask Mike about whether he'd like to do a blog post about the roadmap
+* Identify low-hanging fruit for initial contribution areas. Plan for how people can help us. Self-contained items for a todo list.
+* If there was a centralized CI, what would we be able to do there? What does a sensible CI strategy look like? e.g. Paul's OS test, QEMU emulation for morello. Add issues, "it'd be great to have a section on CI strategy"
+* Welcome to the CHERI Linux community talk for CHERI Tech/start of the new year.
+* Codasip has people tackling iouring, compat support, 
+* glibc is on the wishlish, there's a branch that can be built with LLVM
+* what does the cheri-enabled Debian require? X and Wayland are running on Codasip, in a matchbox window manager. On CheriBSD, openGL doesn't work on X, but probably because of a driver rather than X itself.
+* QT6 patches are not upstream yet. Does Codasip want to work on KDE6?
+
+### 8 Oct 2025
+
+* Repository management: when we want to push some branches.
+* Check with Carl if Hesham can have early access to Codasip's musl c and busybox.
+* Pawel Zalewski gave a deep dive on the Morello Yocto configs:
+  - Went with a dual sysroot, which proved problematic. If they had it to do over again, they would use Clang and CHERI-enabled LLVM, and just change compiler flags between CHERI and non-CHERI.
+  - Userspace was postgres and zabbix.
+  - The proliferation of forks is difficult to work with, found it worked better to use a clean upstream source and apply patches in the Yocto build process.
+   - Found a memory leak in the ducttape embedded javascript engine (only in the purecap version, not in the non-CHERI version).
+   - Porting commonly-used software is a barrier to adoption of CHERI.
+
+### 24 Sep 2025
+
+* Paul Metzger is going to start working on transitioning the CheriBSD test suite to a more general test suite.
+* Codasip has a functional 6.16 Linux Kernel, basics of module loading working, prototype of running both CHERI and non-CHERI userspace. Have updates for QEMU, are working on cleaning up musl fork. Aiming to get things more closely aligned with upstream. (For example, have added a test suite in musl.)
+* In some repositories, have multiple versions of things, would be useful to explore how much they are diverging, and if we can pull them together. (musl C, and busybox).
+* Codasip now has LLVM 18 functional, and are building their Linux system with that.
+How many people are waiting for 6.16 Linux Kernel to be pushed out?
+
+### 10 Sep 2025
+
+* Hesham Almatary has been working on VMs on seL4, 
+* Ruslan Bucan has been working on platform, device drivers.
+* Discussed differences between CVA6-cheri and Codasip X730. Targeting the same version of the CHERI RISC-V standard, may be differences in device drivers, virtualization, performance counters.
+
 ### 13 Aug 2025
 
 * QEMU working group is working toward convergence, will add Codasip’s “prime” features on top after converging other variants.  
