@@ -46,7 +46,7 @@ We welcome contributions in many forms:
 Maintainers are trusted contributors with merge access and a voice in the project's direction. Maintainers are expected to:
 
 * Review PRs and issues in a reasonable timeframe (aim for within 7 days)
-* Participate in release planning and roadmap discussions
+* Participate in roadmap discussions
 * Uphold and enforce the Code of Conduct
 * Mentor contributors and help newcomers find their footing
 * Communicate openly when they are unavailable for extended periods
