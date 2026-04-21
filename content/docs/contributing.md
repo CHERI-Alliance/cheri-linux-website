@@ -1,9 +1,4 @@
-
----
-title: 'Contributor Guide'
-date: 2026-04-21
-weight: 4
----
+# Contributor Guide
 
 *(Draft for Review)*
 
