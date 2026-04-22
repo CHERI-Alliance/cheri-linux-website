@@ -25,7 +25,7 @@ It was noted that Allison's suggestions also apply to other repositories. Pawel 
 **The use of unsigned long for pointers in the Linux kernel:**  
 Uwe sent a small CHERI Linux patch to the Linux kernel mailing list that addresses CHERI's requirement for a 128bit data type for pointers upstream in one particular area. In the following discussion, several noted that it would be useful to get guidance from upstream how to switch from unsigned long for pointers, which is common practice in the Linux kernel but a data type that's too small for CHERI capabilities, to something else. Linus Torvalds has expressed opposition to uintptr\_t in the past. To help advance this discussion, a small example and further reasons to not use unsigned long might be useful. These could include current trends in the hardware industry that require larger pointer representations.
 
-**Morello support in CHERI-Linux:**  
+**Morello support in CHERI Linux:**  
 Hesham has created a planning document for having Morello support in the CHERI-Linux ecosystem: https://github.com/CHERI-Alliance/linux-roadmap/milestones
 Contributions and additions are welcome.
 Christian is happy to receive pull requests for Morello support
