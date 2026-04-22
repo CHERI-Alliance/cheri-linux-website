@@ -4,7 +4,7 @@
 
 Because this meeting was longer than usual, the notes follow a slightly different format to accommodate all discussion points.
 
-Morello GitLab instance and CI:  
+**Morello GitLab instance and CI:**  
 Fathi from Linaro, the maintainer of the Morello GitLab instance, let us know that the contract with ARM for the maintenance of the Morello GitLab and CI ends in September and that the servers might be turned off due to this. Kevin Brodsky will raise this matter internally at ARM. Linaro has resources to help with the migration as they are still contracted by ARM. Everyone agreed that we shouldn't lose the ability to run the Morello Linux software stack on Morello boards. Multiple suggestions were made how to address this:
 * The GitLab instance could possibly remain available with help from ARM.
 * Some of ARM's Morello software work could be moved into branches in the CHERI Alliance repositories.
@@ -14,7 +14,7 @@ It was noted that firmware maintenance cannot be taken over by other organisatio
 It would be useful for the Capable Hub to have more Morello boards and Linaro will discuss redistribution of the their boards with ARM.
 Allison asked Fathi to create a document that details the repositories and other components that would need to be migrated if Linaro cannot continue to host the Morello GitLab instance in the future.
 
-Contribution guidelines and collaboration model:  
+**Contribution guidelines and collaboration model:**  
 Allison created a draft for contribution guidelines: https://github.com/CHERI-Alliance/cheri-linux-website/blob/main/content/docs/contributing.md
 Different branching strategies were discussed:
 * Having contributions made by others than Codasip in a separate branch that unifies them and Codasip's work,
@@ -22,15 +22,15 @@ Different branching strategies were discussed:
 
 It was noted that Allison's suggestions also apply to other repositories. Pawel would like to have a branch that more closely tracks upstream. Andrew suggested that maybe a unified branch is not best solution, as work-in-progress research and other work is best kept in separate branches. Christian would like to avoid fragmentation and breaking further things (Morello support is currently broken in CHERI Linux). He will continue to try and review pull requests in a timely manner.
 
-The use of unsigned long for pointers in the Linux kernel:  
+**The use of unsigned long for pointers in the Linux kernel:**  
 Uwe sent a small CHERI Linux patch to the Linux kernel mailing list that addresses CHERI's requirement for a 128bit data type for pointers upstream in one particular area. In the following discussion, several noted that it would be useful to get guidance from upstream how to switch from unsigned long for pointers, which is common practice in the Linux kernel but a data type that's too small for CHERI capabilities, to something else. Linus Torvalds has expressed opposition to uintptr\_t in the past. To help advance this discussion, a small example and further reasons to not use unsigned long might be useful. These could include current trends in the hardware industry that require larger pointer representations.
 
-Morello support in CHERI-Linux:  
+**Morello support in CHERI-Linux:**  
 Hesham has created a planning document for having Morello support in the CHERI-Linux ecosystem: https://github.com/CHERI-Alliance/linux-roadmap/milestones
 Contributions and additions are welcome.
 Christian is happy to receive pull requests for Morello support
 
-Notes:  
+**Notes:**  
 Paul will from now on take meeting notes and create a monthly Linux working group news update.
 
 ### 8 Apr 2026
