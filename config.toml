@@ -4,6 +4,8 @@ title = "Securing Linux with CHERI"
 themesDir = "themes"
 theme = "whisper-2023-11-26"
 
+summaryLength = 20
+
 pygmentsCodeFences = true
 pygmentsCodefencesGuessSyntax = true
 pygmentsUseClasses = true
@@ -23,9 +25,14 @@ summaryLength = 30
     weight = 1
 
 [[menu.main]]
+    name = "News"
+    url = "/news/"
+    weight = 2
+
+[[menu.main]]
     name = "Docs"
     url = "/docs/"
-    weight = 2
+    weight = 3
 
 [params]
   google_analytics_id=""

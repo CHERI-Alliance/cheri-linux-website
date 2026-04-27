@@ -66,10 +66,18 @@
   </div>
 </div>
 
-{{ with .Site.Data.homepage.adoption }}
+
 <div class="strip bg-light">
-  <div class="container pt-4 pb-4">
-    <h1>{{ .title }}</h1>
+  <section class="section container my-3 pt-3 pb-4">
+    <h1 class="text-secondary text-center my-1">News</h1>
+    {{ partial "home-news" . }}
+  </section>
+</div>
+
+{{ with .Site.Data.homepage.adoption }}
+<div class="strip">
+  <section class="section container my-3 pt-3 pb-4">
+    <h1 class="text-secondary text-center my-1">{{ .title }}</h1>
     <div class="row">
       {{ range .cards }}
       <div class="col-lg-6">
@@ -79,14 +87,14 @@
       </div>
       {{ end }}
     </div>
-  </div>
+  </section>
 </div>
 {{ end }}
 
 {{ with .Site.Data.homepage.features }}
-<div class="strip">
-  <div class="container pt-4 pb-4">
-    <h1>{{ .title }}</h1>
+<div class="strip bg-light">
+  <section class="section container my-3 pt-3 pb-4">
+    <h1 class="text-secondary text-center my-1">{{ .title }}</h1>
     <div class="row lead">
       {{ range .cards }}
       <div class="col-lg-4">
@@ -95,15 +103,16 @@
             <img src="{{ .icon | relURL }}">
           </div>
         </div>
-        <div class="container py-2">
+        <div class="container text-center py-2">
           {{ .text | safeHTML }}
         </div>
       </div>
       {{ end }}
     </div>
-  </div>
+  </section>
 </div>
 {{ end }}
+
 
 {{ with .Site.Data.homepage.mascot }}
 <div class="strip">

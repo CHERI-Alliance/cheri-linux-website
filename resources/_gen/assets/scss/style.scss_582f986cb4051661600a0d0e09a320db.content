@@ -13727,34 +13727,39 @@ p {
     .social a:hover {
       opacity: 0.8; }
 
-.page-home {
+.page-home .title {
+  text-align: center;
+  font-weight: lighter;
+  font-family: "Poppins", Arial, sans-serif, -apple-system; }
+
+.page-home .content {
   text-align: center; }
-  .page-home .title {
-    font-weight: lighter;
-    font-family: "Poppins", Arial, sans-serif, -apple-system; }
-  .page-home p {
+  .page-home .content p {
     margin: 0 auto;
     font-size: 1.2rem;
     font-weight: lighter;
     margin-bottom: 40px; }
     @media (min-width: 768px) {
-      .page-home p {
+      .page-home .content p {
         width: 80%; } }
     @media (min-width: 992px) {
-      .page-home p {
+      .page-home .content p {
         width: 60%; } }
-  .page-home .penguin {
-    border-radius: 3px;
-    margin: 0 auto; }
-    .page-home .penguin img {
-      width: 8%;
-      height: auto; }
-  .page-home .card-icon {
-    border-radius: 3px;
-    margin: 0 auto; }
-    .page-home .card-icon img {
-      width: 20%;
-      height: auto; }
+.page-home .penguin {
+  text-align: center;
+  border-radius: 3px;
+  margin: 0 auto; }
+  .page-home .penguin img {
+    width: 8%;
+    height: auto; }
+
+.page-home .card-icon {
+  text-align: center;
+  border-radius: 3px;
+  margin: 0 auto; }
+  .page-home .card-icon img {
+    width: 20%;
+    height: auto; }
 
 body {
   font-family: "Poppins", Arial, sans-serif, -apple-system;
