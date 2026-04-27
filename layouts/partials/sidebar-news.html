@@ -1,0 +1,14 @@
+{{$currentNode := .}}
+<div class="docs-menu">
+  <h4>Recent News</h4>
+  <ul>
+    {{ range first 10 (where .Site.RegularPages.ByDate.Reverse "Section" "news" ) }}
+    <li class="{{ if eq .File.UniqueID $currentNode.File.UniqueID }}active {{ end }}">
+      <a href="{{ .Permalink }}">{{ .Title }}</a>
+    </li>
+    {{ end }}
+    <li>
+      <a href="/news/">More News...</a>
+    </li>
+  </ul>
+</div>

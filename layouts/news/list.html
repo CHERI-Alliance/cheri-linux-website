@@ -4,13 +4,20 @@
 
 {{ define "main" }}
 
-<h1 class="title">{{ .Title }}</h1>
-<div class="content">
-  {{ .Content }}
-</div>
+<div class="container pt-2 pt-md-6 pb-3 pb-md-6">
+  <div class="row">
+    <div class="col-12 col-md-9">
 
-{{ range.Pages }}
-{{ .Render "summary" }}
-{{ end }}
+      <h1 class="title">{{ .Title }}</h1>
+      <div class="content">
+        {{ .Content }}
+      </div>
+
+      {{ range.Pages }}
+      {{ .Render "summary" }}
+      {{ end }}
+    </div>
+  </div>
+</div>
 
 {{ end }}

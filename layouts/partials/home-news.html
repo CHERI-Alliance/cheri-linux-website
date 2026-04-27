@@ -1,6 +1,6 @@
 <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
 
-    {{ range first 3 (where .Site.RegularPages.ByDate.Reverse "Section" "news" ) }}
+    {{ range first 3 .Site.Taxonomies.categories.featured }}
         <div class="col">
 
             <div class="card border p-3 h-100">
