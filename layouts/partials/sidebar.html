@@ -1,0 +1,10 @@
+<div class="docs-menu">
+  <h4>{{ .Section | humanize }}</h4>
+  <ul>
+    {{ range .Site.Taxonomies.categories.sidebar }}
+    <li>
+      <a href="{{ .Permalink }}">{{ .Title }}</a>
+    </li>
+    {{ end }}
+  </ul>
+</div>

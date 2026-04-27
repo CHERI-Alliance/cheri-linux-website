@@ -1,4 +1,9 @@
-# Contributor Guide
+---
+title: 'Contributing'
+date: 2026-04-22
+weight: 2
+categories: ['sidebar']
+---
 
 *(Draft for Review)*
 

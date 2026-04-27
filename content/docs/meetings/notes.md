@@ -1,3 +1,10 @@
+---
+title: 'Meeting Notes'
+date: 2026-04-22
+weight: 1
+categories: ['sidebar']
+---
+
 # Linux Strategy Meeting Notes
 
 ### 22 Apr 2026

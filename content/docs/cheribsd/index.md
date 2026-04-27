@@ -2,6 +2,7 @@
 title: 'CheriBSD Ports'
 date: 2025-03-28
 weight: 3
+categories: ['sidebar']
 ---
 
 Over 10,000 open source packages have already been ported to CheriBSD, and that work can be re-used with Linux on CHERI.
