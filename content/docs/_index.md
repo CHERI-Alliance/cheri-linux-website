@@ -16,6 +16,6 @@ For more information, join the [mailing list](https://lists.cheri-alliance.org/m
 * Defining and prioritising the roadmap for porting Linux to CHERI
 * Porting and testing across Morello, CHERI-RISC-V, QEMU, and FPGA platforms
 * Toolchain integration — LLVM, QEMU, Yocto, and debugger support
-* Engaging upstream Linux and open sourcecommunities to adopt CHERI changes
+* Engaging upstream Linux and open source communities to adopt CHERI changes
 * Reviewing pull requests and tracking open issues on shared repositories
 
