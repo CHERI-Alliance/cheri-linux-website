@@ -23,11 +23,13 @@
             {{ end }}
           </p>
 
-          {{ with .Params.description }}
-            <p>{{ . }}</p>
-          {{ else }}
-            {{ .Summary | truncate 200 }}
-          {{ end }}
+          <p>
+            {{ with .Params.description }}
+              {{ . }}
+            {{ else }}
+              {{ .Summary | truncate 200 }}
+            {{ end }}
+          </p>
 
           <div class="card-footer">
             <small class="text-muted"><a href="{{ .RelPermalink }}">Read more...</a></small>
