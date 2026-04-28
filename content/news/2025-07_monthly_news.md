@@ -1,9 +1,11 @@
 ---
-title: 'July 2025 Monthly Update'
-authors: ['Fred Barney']
+supertitle: 'Monthly News Update: July 2025'
+title: 'Some catchy descriptive title'
+author: 'Fred Barney'
 date: 2025-08-05
 draft: false
 categories: ['featured']
+description: "This is a catchy teaser, some short description of the content. Convallis leo finibus sem convallis nec donec libero dolor."
 ---
 
 Convallis leo finibus sem convallis nec donec libero dolor. Non fermentum nostra felis nunc imperdiet aliquam himenaeos lobortis enim iaculis. Imperdiet aliquam curabitur sollicitudin himenaeos libero eu luctus. Imperdiet nostra dignissim cursus phasellus curae mollis finibus.

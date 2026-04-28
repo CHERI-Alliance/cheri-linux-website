@@ -1,6 +1,7 @@
 ---
-title: 'June 2025 Monthly Update'
-authors: ['Johan Jones']
+supertitle: 'Monthly News Update: June 2025'
+title: 'CHERI Blossoms Report'
+author: 'Johan Jones'
 date: 2025-07-10
 draft: false
 categories: ['featured']

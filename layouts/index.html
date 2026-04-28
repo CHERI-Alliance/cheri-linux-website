@@ -19,11 +19,11 @@
 
 {{ define "main" }}
 <div class="strip">
-  <div class="container pt-4 pb-4">
+  <div class="container pt-4 pb-2">
     <div class="row">
       <div class="col-12">
         <h1 class="title">{{ .Title | default .Site.Title }}</h1>
-        <div class="content">
+        <div class="lead tagline">
           {{ .Content }}
         </div>
       </div>
@@ -66,34 +66,9 @@
   </div>
 </div>
 
-
-<div class="strip bg-light">
-  <section class="section container my-3 pt-3 pb-4">
-    <h1 class="text-secondary text-center my-1">News</h1>
-    {{ partial "home-news" . }}
-  </section>
-</div>
-
-{{ with .Site.Data.homepage.adoption }}
-<div class="strip">
-  <section class="section container my-3 pt-3 pb-4">
-    <h1 class="text-secondary text-center my-1">{{ .title }}</h1>
-    <div class="row">
-      {{ range .cards }}
-      <div class="col-lg-6">
-        <div class="container py-2 text-start">
-          {{ .text | safeHTML }}
-        </div>
-      </div>
-      {{ end }}
-    </div>
-  </section>
-</div>
-{{ end }}
-
 {{ with .Site.Data.homepage.features }}
-<div class="strip bg-light">
-  <section class="section container my-3 pt-3 pb-4">
+<div class="strip">
+  <section class="section container my-3 pb-4">
     <h1 class="text-secondary text-center my-1">{{ .title }}</h1>
     <div class="row lead">
       {{ range .cards }}
@@ -113,18 +88,26 @@
 </div>
 {{ end }}
 
+<div class="strip bg-light">
+  <section class="section container my-3 py-4">
+    {{ partial "home-news" . }}
+  </section>
+</div>
 
-{{ with .Site.Data.homepage.mascot }}
+{{ with .Site.Data.homepage.adoption }}
 <div class="strip">
-  <div class="container pt-4 pb-4">
-    <div class="row justify-content-right">
-      <div class="col-12">
-        <div class="penguin">
-          <img src="{{ .image | relURL }}" alt="{{ .alt }}">
+  <section class="section container my-3 py-2">
+    <h1 class="text-secondary text-center my-1">{{ .title }}</h1>
+    <div class="row">
+      {{ range .cards }}
+      <div class="col-lg-6">
+        <div class="container py-2 text-start">
+          {{ .text | safeHTML }}
         </div>
       </div>
+      {{ end }}
     </div>
-  </div>
+  </section>
 </div>
 {{ end }}
 

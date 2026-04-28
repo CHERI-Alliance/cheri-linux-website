@@ -12,19 +12,23 @@
     </div>
     <div class="col-12 col-md-9">
 
+      {{ with .Params.supertitle }}
+          <div class="text-muted">{{ . }}</div>
+      {{ end }}
       <h1 class="title">{{.Title}}</h1>
-
-      <p class="text-muted">
-        {{ .Date | time.Format ":date_long" }}
-
-        {{ with .Params.authors }}
-            <br>by {{ index . 0 }}
-        {{ end }}
-      </p>
 
       <div class="content">
         {{.Content}}
       </div>
+
+
+      <p class="text-muted">
+        posted {{ .Date | time.Format "2 Jan 2006" }}
+
+        {{ with .Params.author }}
+            by {{ . }}
+        {{ end }}
+      </p>
 
     </div>
   </div>

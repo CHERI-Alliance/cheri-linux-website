@@ -1,9 +1,8 @@
 ---
 title: 'May 2025 Monthly Update'
-authors: ['Johan Jones']
+author: 'Johan Jones'
 date: 2025-06-02
 draft: false
-categories: ['featured']
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Proin tortor purus platea sit eu id nisi litora libero. Neque vulputate consequat ac amet augue blandit maximus aliquet congue. Pharetra vestibulum posuere ornare faucibus fusce dictumst orci aenean eu facilisis ut volutpat commodo senectus purus himenaeos fames primis convallis nisi.
