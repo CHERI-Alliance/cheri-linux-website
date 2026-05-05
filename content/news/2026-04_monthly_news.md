@@ -1,0 +1,17 @@
+---
+supertitle: 'Monthly News Update: April 2026'
+title: 'Kernel, User Space, and Portability Updates'
+author: 'Paul Metzger'
+date: 2026-05-07
+draft: false
+categories: ['featured']
+---
+This is the first in a series of monthly news updates that we will be publishing going forward.
+
+Work on porting the Linux Kernel to CHERI is progressing in several areas. Codasip continues to track recent Linux kernel releases and is therefore working on a CHERI-enabled Linux 7.0 kernel. Hesham Almatary of the University of Cambridge has created a pull request for initial CVA6-CHERI support. [CVA6-CHERI](https://github.com/Capabilities-Limited/cheri-cva6/tree/zcheri) is a RISC-V CPU design being developed by Capabilities Ltd as part of the COSMIC project with LowRISC. He has also started working towards fixing Morello support. As part of this, an interim Cambridge-internal CI system has been set up to regularly test on Morello, but with the intention of reducing the scope of this as community-maintained public CI systems are established. With work on Linux on CHERI ramping up, Allison Randal of Capabilities Ltd created an initial draft of [contribution guidelines](https://cheri-linux.org/docs/contributing/), and collaboration-models between the parties involved in the development are currently under discussion.
+
+A long-term goal is to eventually upstream CHERI support to mainline Linux. One anticipated obstacle is the ubiquitous use of `unsigned long` for pointers in the Linux kernel, as this type is too small on CHERI systems to hold capabilities. In this context, Uwe Kleine-König of Baylibre made an initial foray on the Linux kernel mailing list by posting a [patch set](https://lore.kernel.org/lkml/cover.1776429984.git.u.kleine-koenig@baylibre.com/) that addresses this issue in some device driver-related `structs`. One goal of the patch set is to avoid casts from `unsigned long` to pointers, but CHERI systems would benefit too. Since then Uwe submitted further patch sets which also would help CHERI.
+
+Work on the CHERI-enabled user space components has also progressed, with Codasip working on fixes for the dynamic linker and other fixes by Hesham and Paul Metzger, who works at the University of Cambridge too. Paul also continued to work on porting the CheriBSD test suite to Linux on CHERI. This test suite was originally developed at Cambridge for CheriBSD and covers various user-space OS APIs, with over 200 tests. A pull request for [cheribuild](https://github.com/CTSRD-CHERI/cheribuild) is currently being worked on to enable others to use these test cases.
+
+CHERI Blossoms 2026 took place at the end of March, and some of Paul's work on improving portability across CheriBSD, Linux on CHERI and potentially other future POSIX-based operating systems with CHERI support was discussed there. Starting at the end of last year, he catalogued CHERI-related differences in OS APIs between Linux on CHERI and CheriBSD with the goal of unifying the APIs. One example for such divergences is the way CHERI protection violations are reported to user space, with Linux on CHERI using SIGSEGV and CheriBSD introducing the new SIGPROT signal. Consensus on how to converge some of these APIs was reached during CHERI Blossoms, and discussions will continue soon on the [mailing list](https://lists.cheri-alliance.org/mailman3/postorius/lists/wg-support-portability.cheri-alliance.org/) of the CHERI Alliance's OS Support & Portability Working Group.
