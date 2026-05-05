@@ -33,7 +33,13 @@ The repositories managed by the Linux Strategy working group at the CHERI Allian
 * [ltp](https://github.com/CHERI-Alliance/ltp): A port of the Linux Test Project to CHERI
 * [yocto-manifest](https://github.com/CHERI-Alliance/yocto-manifest): A Yocto manifest file to build a CHERI-enabled Linux purecap userspace
 * [meta-cheri](https://github.com/CHERI-Alliance/meta-cheri): A CHERI architecture layer for Yocto
+* [opensbi](https://github.com/CHERI-Alliance/opensbi): A port of the OpenSBI project to CHERI-RISCV, an open-source implementation of the RISC-V Supervisor Binary Interface (SBI) specifications.
+* [u-boot](https://github.com/CHERI-Alliance/u-boot): A port of the U-Boot project to CHERI, an open source boot loader for embedded boards.
 
+Within these repos, we have two kinds of branches:
+
+* Branches maintained and tested by a collaborative team across multiple projects and companies. For simple repos (like the website or roadmap), this may simply be the `main` branch, while for repos with many branches, these may be named starting with `collab-` for clarity. Collaborative branches actively welcome pull requests, aim to serve as an integration point for different work streams, and balance the priorities of many contributors.
+* Branches maintained by a smaller group or individual. These branches may be focused more narrowly on the needs of a particular team, or may be a work-in-progress. For clarity, these branches are generally named with an individual, project, or company name at the start, like `bob-`, `morello-`, or `codasip-`.
 
 ## How to Contribute
 
@@ -46,9 +52,18 @@ We welcome contributions in many forms:
 * Documentation edits to improve exising docs and new guides for topics that aren't well documented are always appreciated
 
 
-## Becoming a Maintainer
+## Contributor Teams and Permissions
 
-Maintainers are trusted contributors with merge access and a voice in the project's direction. Maintainers are expected to:
+The Linux Strategy working group has 4 teams of contributors in GitHub:
+
+* CHERI Alliance Linux Contributors - have Triage permissions on all repos managed by the working group, so they can help with managing issues and pull requests and edit the wiki, but can't merge pull requests or commit to the repo.
+* CHERI Alliance Linux Strategy Maintainers - have Write permissions on the roadmap and website repos managed by the working group, so they can merge pull requests, manage GitHub Actions, and create branches.
+* CHERI Alliance Linux Maintainers - have Write permissions on all repos managed by the working group other than the Linux Kernel, so they can merge pull requests, manage GitHub Actions, and create branches.
+* CHERI Alliance Linux Kernel Maintainers - have Write permissions on the Linux Kernel repo managed by the working group, so they can merge pull requests, manage GitHub Actions, and create branches.
+
+Anyone can request to join a team. The existing members of the team will decide whether to approve the request.
+
+Contributor and Maintainer Team members are expected to:
 
 * Review PRs and issues in a reasonable timeframe (aim for within 7 days)
 * Participate in roadmap discussions
@@ -62,10 +77,6 @@ To be considered, a contributor should generally have demonstrated:
 * Good judgment in reviews
 * Alignment with the project's values and direction
 * Responsiveness and reliability
-
-Any existing maintainer on repositories managed by the Linux Strategy working group may nominate a contributor to become a maintainer. The group of existing maintainers will determine whether to approve the new maintainer.
-
-Maintainers who step back from active involvement are moved to emeritus status, their contributions are honored, but they no longer have merge access or a vote. This is the expected and respected off-ramp for most maintainers.
 
 ## Community & Support
 
