@@ -7,6 +7,12 @@ categories: ['sidebar']
 
 # Linux Strategy Meeting Notes
 
+### 06 May 2026
+* Uwe sent additional patches to the Linux kernel mailing list that could help upstream CHERI support, and some of them are already in Linux-next. Although these patches are not CHERI-specific, their references to CHERI sparked more discussion than he had anticipated.
+* Branching-strategy discussions continued in this meeting. Allison proposed introducing a `collab-` prefix, alongside vendor branches prefixed with `codasip-`, `morello-`, etc. She argued that the burden of reviewing and merging community contributions should be shifted away from Codasip, a view echoed by Andrew Murray from the Capable Hub. Under this model, support for other architectures, for example, would live in these branches rather than the `codasip-` branches, with the option for Codasip to cherry pick patches. Some repositories (mainly cheri-meta) struggle with pending pull requests and this proposal would help to alleviate this. Christian from Codasip indicated that he would still be happy to review and merge patches by the community into the Codasip branches in the Linux kernel and Musl repositories. Jessica suggested to have no `collab-` prefix for the non-vendor branches and just call them for example linux-6.8, linux-7.0, etc.
+In a separate, shorter discussion on `main` branches, Uwe volunteered to maintain a fast-forward branch. Jess objected that the history would become chaotic and that such a branch shouldn't be named `main`.
+* Repository and branch permission management was discussed. Allison suggested different roles that could be implemented with GitHub Teams for the repositories that belong to the CHERI Alliance Linux Working Group. Consensus was reached to try out a model that introduces only two roles and relies on 'social rules' rather than technical enforcement of rules for the small number of people that will have write access. These rules and the two roles will be documented in the 'Contributing' section on cheri-linux.org. The new roles also meet Christian's desire to be able to add someone as reviewer to a PR without having to give them write access to the repository. He also remarked that he'd like to be able to see who has write access to which repositories, which is currently not publicly visible.
+
 ### 22 Apr 2026
 
 Because this meeting was longer than usual, the notes follow a slightly different format to accommodate all discussion points.
