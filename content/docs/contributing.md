@@ -38,7 +38,7 @@ The repositories managed by the Linux Strategy working group at the CHERI Allian
 
 Within these repos, we have two kinds of branches:
 
-* Branches maintained and tested by a collaborative team across multiple projects and companies. For simple repos (like the website or roadmap), this may simply be the `main` branch, while for repos with many branches, these may be named starting with `integration-` for clarity. Collaborative branches actively welcome pull requests, aim to serve as an integration point for different work streams, and balance the priorities of many contributors.
+* Branches maintained and tested by a collaborative team across multiple projects and companies. In general, these branches are named `main` or starting with `cheri-`, while for repos with many branches, these may be named starting with `integration-` for clarity. Collaborative branches actively welcome pull requests, aim to serve as an integration point for different work streams, and balance the priorities of many contributors.
 * Branches maintained by a smaller group. These branches may be focused more narrowly on the needs of a particular team, or may be a work-in-progress. For clarity, these branches are generally named with a project or company name at the start, like `morello-`, or `codasip-`.
 
 ## How to Contribute
