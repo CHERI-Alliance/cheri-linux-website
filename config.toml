@@ -1,5 +1,4 @@
 baseURL = "/"
-languageCode = "en-gb"
 title = "Securing Linux with CHERI"
 themesDir = "themes"
 theme = "whisper-2023-11-26"

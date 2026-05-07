@@ -31,7 +31,7 @@
 
     <div class="row">
       <div class="col-lg-9">
-        {{ with .Site.Data.homepage.banner }}
+        {{ with hugo.Data.homepage.banner }}
         <img src="{{ .image | relURL }}" class="shadow w-100 mb-3" alt="{{ .alt }}">
         {{ end }}
       </div>
@@ -45,7 +45,7 @@
             </div>
           </div>
           <div class="col-sm-6 col-lg-12">
-            {{ range .Site.Data.homepage.buttons }}
+            {{ range hugo.Data.homepage.buttons }}
             <div class="row">
               <div class="col text-center">
                 <a href="{{ .link }}" class="button button-primary w-100 mb-2">{{ .text }}</a>
@@ -66,7 +66,7 @@
   </div>
 </div>
 
-{{ with .Site.Data.homepage.features }}
+{{ with hugo.Data.homepage.features }}
 <div class="strip bg-light">
   <section class="section container my-3 py-4">
     <h1 class="text-secondary text-center my-1">{{ .title }}</h1>
@@ -96,7 +96,7 @@
 </div>
 -->
 
-{{ with .Site.Data.homepage.adoption }}
+{{ with hugo.Data.homepage.adoption }}
 <div class="strip">
   <section class="section container my-3 py-2">
     <h1 class="text-secondary text-center my-1">{{ .title }}</h1>
