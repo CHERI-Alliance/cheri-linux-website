@@ -7,6 +7,15 @@ categories: ['sidebar']
 
 # Linux Strategy Meeting Notes
 
+### 03 June 2026
+
+* Baylibre submitted patches to the Linux kernel mailing list that will indirectly help with future upstreaming efforts.
+* Hesham submitted PRs to reinstate Morello support in Codasip's Linux kernel fork. He achieved almost feature parity with Morello Linux. He has also patches to boot Linux on CVA6-CHERI.
+* Pawel continued to work on Syzkaller.
+* Alfredo mentioned a CheriBSD patch set that aims to prevent kernel capabilities leaking into user space.
+* Allison and Carl have been working on improving access control management for the Linux-related CHERI Alliance repositories. One of the goals is to allow others in the wider CHERI community to review pull requests.
+* Stuart from Codasip is now working on meta-cheri.
+
 ### 20 May 2026
 
 * The Codasip Linux kernel has been updated to 7.0.
