@@ -69,4 +69,10 @@ You can SSH into the VM from the host machine as soon as it launches, since cher
 Listening for SSH connections on localhost:12345
 ```
 
+Then ssh into the guest from the host with the same username and password you used on the login prompt:
+
+```
+ssh -p 12345 root@localhost
+```
+
 If you want SSH to listen on a specific port on the host machine, you can add the command-line option `--run/ssh-forwarding-port <port number>` when you call `cheribuild.py`.
