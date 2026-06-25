@@ -1,13 +1,11 @@
 ---
 title: 'Contributing'
-date: 2026-04-22
+date: 2026-06-03
 weight: 2
 categories: ['sidebar']
 ---
 
-*(Draft for Review)*
-
-The focus of the Linux Strategy Working Group at CHERI Alliance is cross-architecture development work to adapt the Linux kernel and userspace software to benefit from CHERI's memory protection and software compartmentalization features. This work is still in an early stage, but builds on decades of collaborative open source development work, most notably:
+The focus of the CHERI Linux Project is cross-architecture development work to adapt the Linux kernel and userspace software to benefit from CHERI's memory protection and software compartmentalization features. This work is still in an early stage, but builds on decades of collaborative open source development work, most notably:
 
 * **CheriBSD:** A capability enabled Unix-like operating system that extends FreeBSD to run on hardware with CHERI memory protection and software compartmentalization features, such as the Arm Morello board and CHERI RISC-V.
 * **Morello Linux:** An Arm-led research project started in 2022, which explores memory safety in OS environments based on the Linux kernel, targeting the Arm Morello board. This used a hybrid mode approach where most kernel pointers remained regular integers, with capabilities mainly at the syscall boundary.
@@ -23,18 +21,18 @@ With this background, it is unsurprising that we consider healthy collaboration 
 
 ## Repository Structure
 
-The repositories managed by the Linux Strategy working group at the CHERI Alliance include:
+The repositories managed by the CHERI Linux Project include:
 
-* [cheri-linux-website](https://github.com/CHERI-Alliance/cheri-linux-website): Source code for the [cheri-linux.org](https://cheri-linux.org/) website
-* [linux-roadmap](https://github.com/CHERI-Alliance/linux-roadmap): Source code for the Linux Strategy working group's [Roadmap](https://cheri-alliance.github.io/linux-roadmap/)
-* [linux](https://github.com/CHERI-Alliance/linux): A port of the Linux Kernel to CHERI, based on earlier work in Morello Linux
 * [busybox](https://github.com/CHERI-Alliance/busybox): A port of Busybox to CHERI, to support minimal Linux userspace builds
-* [musl](https://github.com/CHERI-Alliance/musl): A port of the musl to CHERI, to provide an implementation of the C standard library for Linux-based systems
+* [cheri-linux-website](https://github.com/CHERI-Alliance/cheri-linux-website): Source code for the [cheri-linux.org](https://cheri-linux.org/) website
+* [linux](https://github.com/CHERI-Alliance/linux): A port of the Linux Kernel to CHERI, based on earlier work in Morello Linux
+* [linux-roadmap](https://github.com/CHERI-Alliance/linux-roadmap): Source code for the CHERI Linux Project's [Roadmap](https://cheri-alliance.github.io/linux-roadmap/)
 * [ltp](https://github.com/CHERI-Alliance/ltp): A port of the Linux Test Project to CHERI
-* [yocto-manifest](https://github.com/CHERI-Alliance/yocto-manifest): A Yocto manifest file to build a CHERI-enabled Linux purecap userspace
 * [meta-cheri](https://github.com/CHERI-Alliance/meta-cheri): A CHERI architecture layer for Yocto
+* [musl](https://github.com/CHERI-Alliance/musl): A port of the musl to CHERI, to provide an implementation of the C standard library for Linux-based systems
 * [opensbi](https://github.com/CHERI-Alliance/opensbi): A port of the OpenSBI project to CHERI-RISCV, an open-source implementation of the RISC-V Supervisor Binary Interface (SBI) specifications.
 * [u-boot](https://github.com/CHERI-Alliance/u-boot): A port of the U-Boot project to CHERI, an open source boot loader for embedded boards.
+* [yocto-manifest](https://github.com/CHERI-Alliance/yocto-manifest): A Yocto manifest file to build a CHERI-enabled Linux purecap userspace
 
 Within these repos, we have two kinds of branches:
 
@@ -54,12 +52,30 @@ We welcome contributions in many forms:
 
 ## Contributor Teams and Permissions
 
-The Linux Strategy working group has 2 teams of contributors in GitHub:
+The CHERI Linux Project has 2 teams of contributors:
 
-* CHERI Alliance Linux Contributors - have Triage permissions on all repos managed by the working group, so they can help with managing issues and pull requests and edit the wiki, but can't merge pull requests or commit to the repo.
-* CHERI Alliance Linux Maintainers - have Write permissions on all repos managed by the working group, so they can merge pull requests, manage GitHub Actions, and create branches.
+* CHERI Linux Project Contributors (GitHub Team) - have Triage permissions on all repos managed by the project, so they can help with managing issues and pull requests and edit the wiki, but can't merge pull requests or commit to the repo.
+* CHERI Linux Project Maintainers - have Write or Maintain permissions on specific repos managed by the project, so they can merge pull requests, manage GitHub Actions, and create branches.
 
-Anyone can request to join a team. The existing members of the team will decide whether to approve the request.
+| contributor | permissions |
+|:---|:---|
+| Alfredo Mazzinghi | Write: linux |
+| Allison Randal | Contributors Team; Admin: busybox, cheri-linux-website, linux, linux-roadmap, ltp, meta-cheri, musl, opensbi, u-boot, yocto-manifest |
+| Carl Shaw | Contributors Team; Admin: busybox, cheri-linux-website, linux, linux-roadmap, ltp, meta-cheri, musl, opensbi, u-boot, yocto-manifest |
+| Christian Ehrhardt | Maintain: linux; Write: busybox, musl |
+| Florian Schmaus | Write: musl |
+| Hesham Almatary | Write: busybox, linux, linux-roadmap, musl, u-boot; Future: meta-cheri |
+| Jessica Clarke | Request: Contributors Team |
+| Ka Leung Ho | Contributors Team; Write: opensbi, u-boot |
+| Kevin Brodsky | Contributors Team; Write: linux |
+| Paul Metzger | Contributors Team; Maintain: cheri-linux-website |
+| Pawel Zalewski | Request: meta-cheri |
+| Robert Watson | Contributors Team; Write: linux-roadmap, linux, musl |
+| Stephen Smalley | Write: linux |
+| Stuart Menefy | Maintain: yocto-manifest, meta-cheri |
+
+
+Anyone can request to join a team. The CHERI Linux Strategy Working Group will decide whether to approve the request.
 
 Contributor and Maintainer Team members are expected to:
 
@@ -83,5 +99,5 @@ To be considered, a contributor should generally have demonstrated:
 
 ## Code of Conduct
 
-The Linux Strategy working group follows the CHERI Alliance [Code of Conduct](https://cheri-alliance.org/code-of-conduct/). If you have questions or believe that someone is violating the code of conduct, please get in touch with the CHERI Alliance Code of Conduct team thorough the [contact page](https://cheri-alliance.org/contact/).
+The CHERI Linux Project and CHERI Linux Strategy Working Group follow the CHERI Alliance [Code of Conduct](https://cheri-alliance.org/code-of-conduct/). If you have questions or believe that someone is violating the code of conduct, please get in touch with the CHERI Alliance Code of Conduct team thorough the [contact page](https://cheri-alliance.org/contact/).
 
