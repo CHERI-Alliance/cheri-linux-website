@@ -22,9 +22,9 @@ categories: ['sidebar']
 
 * Codasip are working on a v7.1 release of Linux on CHERI.
 * Hesham attempted to boot Android with Linux on CHERI but encountered issues during boot. Using the compat layer of Linux on CHERI, he booted into a debian userspace on Morello.
-* Benjamin Braddock is working on CVA6 support for cheribuild and meta-cheri.
+* Benjamin is working on CVA6 support for cheribuild and meta-cheri.
 * Most of Hesham's PRs for Morello support have been merged, and he has started working on CVA6 support.
-* Uwe Kleine-König continued to work on upstream patches that will benefit future CHERI upstreaming efforts.
+* Uwe continued to work on upstream patches that will benefit future CHERI upstreaming efforts.
 * UKRI funding for the Capable Hub has stopped, and most Capable Hub employees have stopped working on CHERI-related projects.
 * Allison has been testing CHERI porting tools developed by other contributors.
 * Discussions took place abut hosting this website on a CHERI system.
