@@ -7,6 +7,17 @@ categories: ['sidebar']
 
 # Linux Strategy Meeting Notes
 
+### 01 July 2026
+
+* Uwe anticipates that some of his patches will be in in the upstream 7.2 release. He currently has around 130 patches.
+* Codasip will likely release the v7.1 of Linux on CHERI.
+* Christian worked on purecap glibc.
+* Hesham added cheribuild targets for Debian images with the Linux on CHERI kernel.
+* Allison tested Hesham's cheribuild targets for Debian with Linux on CHERI.
+* Allison also worked on the guides on this website and continued planning for hosting the website on CHERI systems.
+* Issues related to VMAP\_STACK were discussed during the meeting.
+* Discussions around how to build CHERI LLVM for Debian with Linux on CHERI.
+
 ### 17 June 2026
 
 * Codasip are working on a v7.1 release of Linux on CHERI.
