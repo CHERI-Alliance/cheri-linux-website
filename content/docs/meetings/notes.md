@@ -10,7 +10,7 @@ categories: ['sidebar']
 ### 01 July 2026
 
 * Uwe anticipates that some of his patches will be in in the upstream 7.2 release. He currently has around 130 patches.
-* Codasip will likely release the v7.1 of Linux on CHERI.
+* Codasip will likely release the v7.1 of Linux on CHERI this week.
 * Christian worked on purecap glibc.
 * Hesham added cheribuild targets for Debian images with the Linux on CHERI kernel.
 * Allison tested Hesham's cheribuild targets for Debian with Linux on CHERI.
