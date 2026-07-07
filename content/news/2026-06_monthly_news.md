@@ -1,6 +1,6 @@
 ---
 supertitle: 'Monthly News Update: June 2026'
-title: 'Linux on CHERI with Debian userspace, CVA6 support, CHERI-Enabled Linux v7.1'
+title: 'Linux on CHERI with Debian user space, CVA6 support, CHERI-Enabled Linux v7.1'
 author: 'Paul Metzger'
 date: 2026-07-06
 draft: false 
