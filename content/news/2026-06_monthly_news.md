@@ -16,4 +16,4 @@ Benjamin Braddock and Hesham have been working on CVA6 support and successfully 
 
 Allison Randal worked on guides available on cheri-linux.org and participated in discussions about hosting the website on a CHERI system. She also tested externally developed CHERI porting tools. 
 
-Unfortunately, UKRI funding for the Capable Hub has stopped and most employees have ceased working on CHERI. It is anticipated that this only temporary.
+Unfortunately, UKRI funding for the Capable Hub has stopped and most employees have ceased working on CHERI. It is anticipated that this is only temporary.
