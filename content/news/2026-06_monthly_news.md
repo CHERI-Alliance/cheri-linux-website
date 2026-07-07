@@ -1,6 +1,6 @@
 ---
 supertitle: 'Monthly News Update: June 2026'
-title: 'Linux on CHERI with legacy Debian userspace, CVA6 support, CHERI-Enabled Linux 7.1 released'
+title: 'Linux on CHERI with Debian userspace, CVA6 support, CHERI-Enabled Linux v7.1'
 author: 'Paul Metzger'
 date: 2026-07-06
 draft: false 
@@ -14,6 +14,6 @@ Uwe Kleine-König anticipates that his patches will be included in the next upst
 
 Benjamin Braddock and Hesham have been working on CVA6 support and successfully booted the Linux on CHERI fork. Yocto meta-cheri support and cheribuild targets for this are currently work in progress.
 
-Allison worked on guides available on cheri-linux.org and participated in discussions about hosting the website on a CHERI system. She also tested externally developed CHERI porting tools. 
+Allison Randal worked on guides available on cheri-linux.org and participated in discussions about hosting the website on a CHERI system. She also tested externally developed CHERI porting tools. 
 
 Unfortunately, UKRI funding for the Capable Hub has stopped and most employees have ceased working on CHERI. It is anticipated that this only temporary.
