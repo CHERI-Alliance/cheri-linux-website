@@ -33,15 +33,7 @@ Clone the cheribuild source repo:
 
 ```
 git clone git@github.com:CTSRD-CHERI/cheribuild.git
-```
-
-At the moment, using a Morello Linux image in cheribuild requires some patches that haven't been merged into the main branch yet, so you'll need to checkout the `linux_debian` branch:
-
-```
 cd cheribuild
-git fetch
-git checkout --track origin/linux_debian
-
 ```
 
 ### Build and run the QEMU VM
