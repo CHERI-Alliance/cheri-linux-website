@@ -7,6 +7,21 @@ categories: ['sidebar']
 
 # Linux Strategy Meeting Notes
 
+### 15 July 2026
+
+Hesham ran Linux on CHERI-Mocha, which is being developed as part of the COSMIC project:
+ * He also ran cheriostest on this setup, which is Paul's portable adaptation of CheriBSD's cheribsdtest.
+ * He also continued to work on Linux on Morello.
+
+Most of the meeting slot was used for a discussion about Linux's pointer hashing on CHERI systems:
+ * Christian adapted the Linux kernel's pointer hashing to work with CHERI capabilities by hashing the base, the top and the address.
+ * Hesham and Jess are arguing that pointer hashing and ASLR should be turned off by default on CHERI systems, because CHERI mitigates attacks that are mitigated it and also other mitigations, like ASLR, and, therefore, makes them unnecessary.
+ * Alfredo and Kevin argue that disabling them by default makes sense but people should be able to enable them if they wish to do so.
+ * Jess would like to prevent users from unknowingly incurring the overhead of mitigations that are unnecessary on CHERI systems, particularly when CHERI-unaware kernel configurations are copied without modification. She suggested introducing a third option in addition to "on" and "off" to explicitly indicate that a mitigation should be enabled even when it is redundant in the presence of CHERI (something like --i-really-want-aslr-with-cheri).
+ * Codasip have turned off hashed pointers by default, which causes the kernel to emit a prominent warning in the boot log. Kevin argued that the warning should be removed.
+ * Christian would like to keep the warning but agreed to reduce the prominence of the warning and turn into an informational message.
+ * Whether pointer hashing and other mitigations that overlap with CHERI should be turned on by default is still open to debate. Christian noted that leaked kernel addresses could be used for attacks even in the presence of CHERI, in ways that the WG is not aware of. He mentioned speculative execution attacks as an example. He also noted that likelihood of patch acceptance during future upstreaming efforts should be considered and that some like to layer mitigations on top of each other for defense in depth.
+
 ### 01 July 2026
 
 * Uwe anticipates that some of his patches will be in in the upstream 7.2 release. He currently has around 130 patches.
