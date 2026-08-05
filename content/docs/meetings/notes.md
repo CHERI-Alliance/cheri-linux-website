@@ -7,6 +7,13 @@ categories: ['sidebar']
 
 # Linux Strategy Meeting Notes
 
+### 29 July 2026
+* Pawel contributed to Uwe's work on ACPI device ID patches, which will benefit future CHERI upstreaming effort.
+* Work of the Capable Hub is still paused.
+* Christian is working on a CHERI port of glibc. Most tests are passing.
+* Hesham has been working on CVA6-related tooling and packaging. Cheribuild has now Linux on CVA6 targets and Jenkins CI.
+* We discussed the future of Linaro repositories, and how CHERI Alliance repositories and their branches are organised.
+
 ### 15 July 2026
 
 Hesham ran Linux on CHERI-Mocha, which is being developed as part of the COSMIC project:
