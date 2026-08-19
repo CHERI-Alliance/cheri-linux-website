@@ -49,13 +49,15 @@ Write the Morello Linux disk image to the drive:
  $ sync
 ```
 
-Reinstall the internal SATA drive in the Morello board.
+(If the drive auto-mounts on your desktop, unmount all partitions using `sudo umount /dev/sdX*`.)
+
+Then unplug the adapter cable from your desktop, and reinstall the internal SATA drive in the Morello board.
 
 ## Boot the Morello board
 
 Attach a power cable, keyboard, and monitor to the Morello board, and turn on the power. If the board doesn't choose the correct internal drive the first time you boot it (or tries to network boot or PXE boot), hold down `ESCAPE` when the boot splash screen comes up on the monitor to enter the "Boot Manager" and choose the internal drive as the boot target.
 
-When the boot process is fininished, you'll see a login prompt. Login with user `root` and password `morello`.
+When the boot process is fininished, you'll see a login prompt on the monitor. Login with user `root` and password `morello`.
 
 
 ## Access the Morello board over SSH
