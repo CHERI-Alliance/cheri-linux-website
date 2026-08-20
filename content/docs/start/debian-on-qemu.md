@@ -3,7 +3,7 @@ title: 'Getting Started with Debian on QEMU'
 date: 2026-08-19
 ---
 
-This page contains some simple instructions to build and boot into a plain vanilla Debian environment running on a RISC-V or ARM-based CHERI virtual machine in QEMU.
+This page contains some simple instructions to build and boot into a plain vanilla Debian environment running on a Morello (Arm-based) CHERI virtual machine in QEMU.
 
 ## Setup
 
@@ -36,16 +36,18 @@ git clone git@github.com:CTSRD-CHERI/cheribuild.git
 From the `cheribuild/` source directory run the cheribuild script:
 
 ```
-./cheribuild.py run-debian-on-cheri-linux-riscv64-purecap --linux-kernel/git-revision cambridge-morello-7.0 -d
+./cheribuild.py run-debian-on-cheri-linux-morello-purecap --linux-kernel/git-revision cambridge-morello-7.0 -d
 ```
 
 This command specifies that cheribuild should:
 
- * Build and run Debian on a RISC-V purecap target `run-debian-on-cheri-linux-riscv64-purecap` (for Debian on a Morello purecap target use `run-debian-on-cheri-linux-morello-purecap`)
+ * Build and run Debian on a Morello pure capability target `run-debian-on-cheri-linux-morello-purecap`
  * Use the Linux Kernel version `cambridge-morello-7.0`
  * Build all dependencies necessary to build and run the QEMU VM (that's the `-d` at the end)
 
-The build will take a while, and near the end it will pause to ask you to set your timezone and root password. After completing that configuration, it will drop you into a login prompt for the Debian image running in a QEMU VM. Login with user `root` and the password you set.
+The build will take a while. Near the end it will pause to ask you to set the timezone and root password, then drop you into a login prompt for the Debian image running in a QEMU VM. Login with user `root` and the password you set.
+
+<!-- Comment out this section, because it isn't working.
 
 ## Access the VM over SSH
 
@@ -62,3 +64,4 @@ ssh -p <port> root@localhost
 ```
 
 If you want SSH to listen on a specific port on the host machine, you can add the command-line option `--run/ssh-forwarding-port <port>` when you call `cheribuild.py`.
+-->
