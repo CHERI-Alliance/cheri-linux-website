@@ -13,8 +13,8 @@ buttons:
     link: https://cheri-alliance.org/discover-cheri/
   - text: Code Repositories
     link: https://github.com/orgs/CHERI-Alliance/repositories
-  - text: Get Started on Morello
-    link: https://linux.morello-project.org/
+  - text: Getting Started
+    link: /docs/start/
 
 # Adoption section for the home page
 adoption:
