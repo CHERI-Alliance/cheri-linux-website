@@ -3,7 +3,7 @@ title: 'Getting Started with Debian on QEMU'
 date: 2026-08-19
 ---
 
-This page contains some simple instructions to setup a QEMU VM with everything you need to build and boot into a Debian environment.
+This page contains some simple instructions to build and boot into a plain vanilla Debian environment running on a RISC-V or ARM-based CHERI virtual machine in QEMU.
 
 ## Setup
 
@@ -45,7 +45,7 @@ This command specifies that cheribuild should:
  * Use the Linux Kernel version `cambridge-morello-7.0`
  * Build all dependencies necessary to build and run the QEMU VM (that's the `-d` at the end)
 
-The build will take a while, but at the end it will drop you into a login prompt for the Debian image running in a QEMU VM. Login with user `root` and  password `morello`.
+The build will take a while, and near the end it will pause to ask you to set your timezone and root password. After completing that configuration, it will drop you into a login prompt for the Debian image running in a QEMU VM. Login with user `root` and the password you set.
 
 ## Access the VM over SSH
 
