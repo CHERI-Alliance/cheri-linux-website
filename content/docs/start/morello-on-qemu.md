@@ -58,13 +58,13 @@ The build will take a while, but at the end it will drop you into a login prompt
 You can SSH into the VM from the host machine as soon as it launches, since cheribuild sets this up for you automatically. The port number is variable, because cheribuild was designed for a shared build system. Near the end of the build process, cheribuild will show a message that tells you which port to use for SSH from the host machine:
 
 ```
-Listening for SSH connections on localhost:12345
+Listening for SSH connections on localhost:<port>
 ```
 
 Then ssh into the guest from the host with the same username and password you used on the login prompt:
 
 ```
-ssh -p 12345 root@localhost
+ssh -p <port> root@localhost
 ```
 
-If you want SSH to listen on a specific port on the host machine, you can add the command-line option `--run/ssh-forwarding-port <port number>` when you call `cheribuild.py`.
+If you want SSH to listen on a specific port on the host machine, you can add the command-line option `--run/ssh-forwarding-port <port>` when you call `cheribuild.py`.
