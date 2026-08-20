@@ -7,6 +7,12 @@ categories: ['sidebar']
 
 # Linux Strategy Meeting Notes
 
+### 12 August 2026
+* Hesham worked on Debian on CVA6-CHERI. He is debugging CHERI faults when executing standard tools such as 'ls' which are compat binaries.
+* He also integrated Paul's cheri-os-tests into Cambridge's internal CI.
+* Allison put instructions for how to run Debian with the Linux fork on Qemu on cheri-linux.org. The Debian user space is composed of legacy non-purecap binaries, but running purecap binaries is supported.
+* Discussions around a bugfix that hasn't been merged for two weeks into the LLVM fork (the one in the CHERI Alliance repository).
+
 ### 29 July 2026
 * Pawel contributed to Uwe's work on ACPI device ID patches, which will benefit future CHERI upstreaming effort.
 * Work of the Capable Hub is still paused.
