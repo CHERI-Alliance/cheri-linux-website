@@ -9,7 +9,7 @@ This page contains some simple instructions to setup a Morello development board
 
 ### Update the firmware
 
-Remove the microSD card from the Morello board. (Press the card into the slot until it clicks, and it will spring out of the slot.) Plug the microSD card into a Linux desktop using an SD card reader (something like https://www.amazon.com/dp/B01EFPX9XA). Find the right drive by running  `lsblk` on your desktop before and after plugging in the SD card reader. Mount the microSD card, and delete any old firmware.
+Remove the microSD card from the Morello board. (Press the card into the slot until it clicks, and it will spring out of the slot.) Plug the microSD card into a Linux desktop using an SD card reader (something like [this](https://www.amazon.com/dp/B01EFPX9XA)). Find the right drive by running  `lsblk` on your desktop before and after plugging in the SD card reader. Mount the microSD card, and delete any old firmware.
 
 ```
  $ sudo mount /dev/sdX1 /mnt
@@ -32,7 +32,7 @@ When the copy is done, unmount the microSD card:
 
 Then unplug the SD card reader from your desktop, and re-install the microSD card in the Morello board.
 
-## Install Morello Linux on the internal drive
+### Install Morello Linux on the internal drive
 
 Download the [latest image](https://git.morello-project.org/morello/morello-rootfs-images/-/jobs/artifacts/morello/mainline/raw/morello-soc.tar.xz?job=build-morello-rootfs-images) for the Morello SoC from the [list of images](https://git.morello-project.org/morello/morello-rootfs-images). Unpack the compressed image:
 
@@ -40,7 +40,7 @@ Download the [latest image](https://git.morello-project.org/morello/morello-root
  $ tar -xJf morello-soc.tar.xz
 ```
 
-While the Morello board is powered down, remove the internal SATA drive from the board (the default drive on a desktop Morello box is a 240GB SSD). Plug the drive into a Linux desktop computer using an external SATA to USB adapter cable (something like https://www.amazon.com/dp/B00MYU0EAU/). Find the right drive by running `lsblk` on your desktop before and after plugging in the drive.
+While the Morello board is powered down, remove the internal SATA drive from the board (the default drive on a desktop Morello box is a 240GB SSD). Plug the drive into a Linux desktop computer using an external SATA to USB adapter cable (something like [this](https://www.amazon.com/dp/B00MYU0EAU/)). Find the right drive by running `lsblk` on your desktop before and after plugging in the drive.
 
 Write the Morello Linux disk image to the drive:
 
@@ -53,7 +53,7 @@ Write the Morello Linux disk image to the drive:
 
 Then unplug the adapter cable from your desktop, and reinstall the internal SATA drive in the Morello board.
 
-## Boot the Morello board
+### Boot the Morello board
 
 Attach a power cable, keyboard, and monitor to the Morello board, and turn on the power. If the board doesn't choose the correct internal drive the first time you boot it (or tries to network boot or PXE boot), hold down `ESCAPE` when the boot splash screen comes up on the monitor to enter the "Boot Manager" and choose the internal drive as the boot target.
 
