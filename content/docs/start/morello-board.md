@@ -40,7 +40,7 @@ Download the [latest image](https://git.morello-project.org/morello/morello-root
  $ tar -xJf morello-soc.tar.xz
 ```
 
-While the Morello board is powered down, remove the internal SATA drive from the board (the default drive on a desktop Morello box is a 240GB SDD). Plug the drive into a Linux desktop computer using an external SATA to USB adapter cable (something like https://www.amazon.com/dp/B00MYU0EAU/). Find the right drive by running `lsblk` on your desktop before and after plugging in the drive.
+While the Morello board is powered down, remove the internal SATA drive from the board (the default drive on a desktop Morello box is a 240GB SSD). Plug the drive into a Linux desktop computer using an external SATA to USB adapter cable (something like https://www.amazon.com/dp/B00MYU0EAU/). Find the right drive by running `lsblk` on your desktop before and after plugging in the drive.
 
 Write the Morello Linux disk image to the drive:
 
