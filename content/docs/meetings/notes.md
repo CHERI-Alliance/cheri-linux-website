@@ -7,6 +7,12 @@ categories: ['sidebar']
 
 # Linux Strategy Meeting Notes
 
+### 26 August 2026
+* The CHERI research group at the Department of Computer Science and Technology has received permission to publish POSIX man pages with CHERI extensions. As part of this, Paul resumed discussions on converging CHERI extensions to POSIX APIs on the CHERI Alliance OS Support & Portability Working Group mailing list: https://lists.cheri-alliance.org/mailman3/postorius/lists/wg-support-portability.cheri-alliance.org/
+* Kevin suggested creating a Section 7 man page that provides an overview over CHERI.
+* He also suggested that the PCuABI specification should be maintained in addition to the new man pages. Because Linux treats its man pages and docs.kernel.org as authorative documentation, Allison suggested to convert the PCuABI specification into man pages.
+* Allison added Morello guides to cheri-linux.org.
+
 ### 12 August 2026
 * Hesham worked on Debian on CVA6-CHERI. He is debugging CHERI faults when executing standard tools such as 'ls' which are compat binaries.
 * He also integrated Paul's cheri-os-tests into Cambridge's internal CI.
