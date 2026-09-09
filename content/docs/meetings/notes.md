@@ -7,6 +7,13 @@ categories: ['sidebar']
 
 # Linux Strategy Meeting Notes
 
+### 09 September 2026
+* Christian continues to work on a CHERI port of glibc, most tests of its test suite are now passing.
+* Paul reported that he merged a PR for a cmake-based build system for the cheri-os-test into its development branch.
+* Allison brought the possibility of creating a CHERI-enabled router Linux distribution into discussion.
+* In the context of creating Debian-based system, Allison suggested to start with a legacy user space and then port software components to CHERI bit-by-bit. Christian noted that we will need a working multi-lib setup for this.
+* He remarked that CHERI QEMUs performance has room for improvements, and that it would be useful to work on that.
+
 ### 26 August 2026
 * The CHERI research group at the Department of Computer Science and Technology has received permission to publish POSIX man pages with CHERI extensions. As part of this, Paul resumed discussions on converging CHERI extensions to POSIX APIs on the CHERI Alliance OS Support & Portability Working Group mailing list: https://lists.cheri-alliance.org/mailman3/postorius/lists/wg-support-portability.cheri-alliance.org/
 * Kevin suggested creating a Section 7 man page that provides an overview over CHERI.
