@@ -7,6 +7,19 @@ categories: ['sidebar']
 
 # Linux Strategy Meeting Notes
 
+### 23 September 2026
+* Hesham has worked on CHERI-CVA6 support in recent months and has implemented cheribuild targets that can generate disk images for Genesis 2 FPGA boards. This work is currently in separate development branches.
+* Work on adding support for the most recent CHERI-RISC-V standard to various projects, such as LLVM for CHERI and cheribuild, has commenced, which led to changes in the names that are used to refer to the different CHERI-RISC-V variants: `zcheri093` now refers to the older v0.9.3 draft standard, `rvy` refers to v0.9.9 and `xcheri` to [CHERIv9](https://www.cl.cam.ac.uk/techreports/UCAM-CL-TR-987.pdf).
+* Documentation related to our Linux fork will need to be updated to reflect these naming changes too.
+* However, work on adding support for the v0.9.9 draft to the Linux fork has not started yet. Christian suggested to wait until the LLVM and QEMU forks support the new draft spec fully.
+* CI infrastructure was temporarily broken by this too. Hesham has been working on fixing these issues.
+* Discussions around a potential deep-dive presentation on the changes in the CHERI-RISC-V draft specification.
+* Kevin is in contact with engineers who worked on the Morello bring up. Anyone who has Morello firmware issues should contact him, as these developers may have some bandwidth to work on issues.
+* Linaro will likely have funding to support Morello for another two years. Related discussions around migrating Linaro and Capable Hub git repositories and the CI infrastructure. Repositories that were mentioned include: Bionic, Musl and Android work. Morello firmware binaries will need to be archived too.
+* Christian investigated potential performance improvements for CHERI QEMU.
+* Codasip's Linux team started to work on a temporal safety subsystem and on hardening eBPF with CHERI. Kevin mentioned related eBPF isolation work that wasn't well received by kernel maintainers.
+* Some CHERI Alliance repositories currently lack CI infrastructure. With work by the Capable Hub paused, pull requests for these repositories are no longer automatically checked. Jessica and Christian discussed whether Codasip could run nightly CI jobs for them.
+
 ### 09 September 2026
 * Christian continues to work on a CHERI port of glibc, most tests of its test suite are now passing.
 * Paul reported that he merged a PR for a cmake-based build system for the cheri-os-test into its development branch.
