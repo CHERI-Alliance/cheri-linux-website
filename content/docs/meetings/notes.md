@@ -7,6 +7,9 @@ categories: ['sidebar']
 
 # Linux Strategy Meeting Notes
 
+### 07 October 2026
+Tariq Kurd of Codasip presented changes introduced in the CHERI-RISC-V draft standard between version 0.9.3 and version 0.9.10.
+
 ### 23 September 2026
 * Hesham has worked on CHERI-CVA6 support in recent months and has implemented cheribuild targets that can generate disk images for Genesis 2 FPGA boards. This work is currently in separate development branches.
 * Work on adding support for the most recent CHERI-RISC-V standard to various projects, such as LLVM for CHERI and cheribuild, has commenced, which led to changes in the names that are used to refer to the different CHERI-RISC-V variants: `zcheri093` now refers to the older v0.9.3 draft standard, `rvy` refers to v0.9.9 and `xcheri` to [CHERIv9](https://www.cl.cam.ac.uk/techreports/UCAM-CL-TR-987.pdf).
