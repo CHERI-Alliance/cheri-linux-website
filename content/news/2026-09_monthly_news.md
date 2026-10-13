@@ -2,7 +2,7 @@
 supertitle: 'Monthly News Update: September 2026'
 title: 'Temporal Safety Development, Purecap glibc Progress and CHERI-RISC-V Renaming'
 author: 'Paul Metzger'
-date: 2026-13-10
+date: 2026-10-13
 draft: false 
 categories: ['featured']
 ---
