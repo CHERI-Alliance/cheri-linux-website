@@ -7,6 +7,12 @@ categories: ['sidebar']
 
 # Linux Strategy Meeting Notes
 
+### 21 October 2026
+* Attendance was low today; only Allison, Christian and Paul were present.
+* Christian continued to work on performance improvements for CHERI Qemu, including optimisations to dynamically generated code, capability loads and stores, and a new locking scheme for tags. The improvements substantially reduced the execution time of a test suite that he is using. The work has not yet been merged into the QEMU fork.
+* Codasip continued to work in the glibc CHERI port. It is now generally passing the test suite, and Codasip is working on compiling SPEC against it.
+* Christian mentioned that the CHERI fork of LLVM handles memory copies inefficiently in some corner cases.
+
 ### 07 October 2026
 Tariq Kurd of Codasip presented changes introduced in the CHERI-RISC-V draft standard between version 0.9.3 and version 0.9.10.
 
