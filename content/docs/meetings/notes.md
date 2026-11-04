@@ -7,6 +7,13 @@ categories: ['sidebar']
 
 # Linux Strategy Meeting Notes
 
+### 4 November 2026
+* Dicussions about future support for version 0.9.10 of the CHERI-RISC-V specification in Codasip's Linux fork. The fork currently supports version 0.9.3.
+* Alfredo, Jessica and Hesham discussed toolchain support for version 0.9.10 with Christian, as well as work required to add support to the Linux fork.
+* Christian mentioned that the semantics of 'levels' may have changed from version 0.9.3 to 0.9.10, which could break the current Linux fork.
+* Alfredo brought into discussion a new naming scheme for capability permissions which uses the terms 'read' and 'write' instead of 'load' and 'store'.
+* He also answered Kevin's questions about what is being upstreamed from CheriBSD to FreeBSD.
+
 ### 21 October 2026
 * Attendance was low today; only Allison, Christian and Paul were present.
 * Christian continued to work on performance improvements for CHERI Qemu, including optimisations to dynamically generated code, capability loads and stores, and a new locking scheme for tags. The improvements substantially reduced the execution time of a test suite that he is using. The work has not yet been merged into the QEMU fork.
