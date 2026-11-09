@@ -21,7 +21,7 @@ categories: ['sidebar']
 * Christian mentioned that the CHERI fork of LLVM handles memory copies inefficiently in some corner cases.
 
 ### 07 October 2026
-Tariq Kurd of Codasip presented changes introduced in the CHERI-RISC-V draft standard between version 0.9.3 and version 0.9.10.
+Tariq Kurd of Codasip presented changes introduced in the [CHERI-RISC-V draft standard between version 0.9.3 and version 0.9.10](https://cheri-linux.org/docs/meetings/deepdive/2026-10-07_Tariq_Kurd_CHERI_RISC-V_standard_changes_0.9.3_to_0.9.10.pdf).
 
 ### 23 September 2026
 * Hesham has worked on CHERI-CVA6 support in recent months and has implemented cheribuild targets that can generate disk images for Genesis 2 FPGA boards. This work is currently in separate development branches.
