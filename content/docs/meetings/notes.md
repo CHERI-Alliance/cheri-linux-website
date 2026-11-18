@@ -7,6 +7,12 @@ categories: ['sidebar']
 
 # Linux Strategy Meeting Notes
 
+### 18 November 2026
+* Codasip's internal compiler does not yet support RVY. Capabilities Ltd. have a fork with functional RVY support but not all changes have been upstreamed yet.
+* Christian has created a PR for his QEMU performance optimisations.
+* Kevin looked into the issues experienced by some users of the Morello boxes. He suggested creating support tickets. Jess and Kevin will test the process.
+* Codasip have an internal purecap Debian-based image with purecap glibc, Fluxbox and the software stack beneath Fluxbox also built as purecap. This is not yet publicly available.
+
 ### 4 November 2026
 * Dicussions about future support for version 0.9.10 of the CHERI-RISC-V specification in Codasip's Linux fork. The fork currently supports version 0.9.3.
 * Alfredo, Jessica and Hesham discussed toolchain support for version 0.9.10 with Christian, as well as work required to add support to the Linux fork.
